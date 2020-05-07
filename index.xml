@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>d3m0&#39;s Blog</title>
+        <link>https://cycd3m0.github.io/</link>
+        <description>d3m0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 04 May 2020 02:14:13 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>Euler’s totient function</title>
+    <link>https://cycd3m0.github.io/posts/eulers-totient-function/</link>
+    <pubDate>Mon, 04 May 2020 02:14:13 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/eulers-totient-function/</guid>
+    <description><![CDATA[Euler’s totient function $\phi(n)$ 代表 $1,2, \cdots ,n$ 中，跟 $n$ 互質的整數個數
+  如果 $p$ 是質數
+  $\phi(p) = p - 1$
+  $\phi(p^{k}) = p^{k} - p^{k-1}$
+    如果 $n = p \times q \times r$ ( $p , q , r$ 皆為質數)
+ $\phi(n) = \phi(p) \times \phi(q) \times \phi(r)$     Example $ \phi(90) = \phi(2) \times \phi(3^{2}) \times \phi(5) \\ \hspace{2.]]></description>
+</item><item>
+    <title>Chinese Remainder Theorem</title>
+    <link>https://cycd3m0.github.io/posts/chinese-remainder-theorem/</link>
+    <pubDate>Mon, 04 May 2020 02:13:58 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/chinese-remainder-theorem/</guid>
+    <description><![CDATA[CRT $$ \begin{cases} x \equiv a_{1} \ ( \bmod \ m_{1} ) \\ x \equiv a_{2} \ ( \bmod \ m_{2} ) \\ \hspace{3.5em} \vdots \\ x \equiv a_{n} \ ( \bmod \ m_{n} ) \end{cases} $$
+已知合數 $M = m_{1} \times m_{2} \times \cdots \times m_{n}$
+$m_{1},m_{2}, \cdots ,m_{n}$ 為彼此互質的整數 ( $m_{i}$ 可為質數的 $k$ 次方，如 $m_{1} = 5^{3}$ )
+ 我們可以透過 $a_{1},a_{2}, \cdots ,a_{n}$ 以及 $m_{1},m_{2}, \cdots ,m_{n}$ 計算出 $A$]]></description>
+</item></channel>
+</rss>
