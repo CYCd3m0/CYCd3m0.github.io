@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>blog - Tag - d3m0&#39;s Blog</title>
+        <link>https://cycd3m0.github.io/tags/blog/</link>
+        <description>blog - Tag - d3m0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 07 May 2020 12:54:41 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/blog/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo on GitHub</title>
+    <link>https://cycd3m0.github.io/posts/hugo-on-github/</link>
+    <pubDate>Thu, 07 May 2020 12:54:41 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/hugo-on-github/</guid>
+    <description><![CDATA[Hugo with LoveIt 為了避免自己忘記，先記錄下關於建立這個 blog 的過程
+Basic   建立一個空的資料夾 (下面以 hugo-blog 為例)
+  建立網站 : hugo new site &lt;dir_name&gt; 1  hugo new site hugo-blog  
+  進到資料夾內，把要用的主題 clone 下來 (LoveIt) 1  git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt  
+  建立新的文章 : hugo new posts/&lt;file_name&gt; (以 Hugo-on-GitHub.md 為例)  先完成下面的 Configuration 再新增文章 1  hugo new posts/Hugo-on-GitHub.md  
+  Configuration   主要修改的是 config.]]></description>
+</item></channel>
+</rss>
