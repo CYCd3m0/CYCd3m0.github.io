@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>RSA - Tag - d3m0&#39;s Blog</title>
+        <link>https://cycd3m0.github.io/tags/rsa/</link>
+        <description>RSA - Tag - d3m0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 16 May 2020 10:20:01 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/rsa/" rel="self" type="application/rss+xml" /><item>
+    <title>RSA</title>
+    <link>https://cycd3m0.github.io/posts/rsa/</link>
+    <pubDate>Sat, 16 May 2020 10:20:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/rsa/</guid>
+    <description><![CDATA[RSA Parameters $$ n = p \times q $$
+$$ \phi(n) = (p-1) \times (q-1) $$
+$$ \gcd (e ,\ \phi (n)) = 1 $$
+$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$
+Note  選擇的 $e$ 必須與 $\phi (n)$ 互質   Encryption $$ M^{e} \equiv C \ (\bmod \ n) $$
+Decryption $$ C^{d} \equiv M \ (\bmod \ n) $$
+Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$]]></description>
+</item></channel>
+</rss>
