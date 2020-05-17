@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>hashpump - Tag - d3m0&#39;s Blog</title>
+        <link>https://cycd3m0.github.io/tags/hashpump/</link>
+        <description>hashpump - Tag - d3m0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 May 2020 03:36:30 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/hashpump/" rel="self" type="application/rss+xml" /><item>
+    <title>Hashpump Usage</title>
+    <link>https://cycd3m0.github.io/posts/hashpump-usage/</link>
+    <pubDate>Sun, 17 May 2020 03:36:30 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/hashpump-usage/</guid>
+    <description><![CDATA[條件   已知 hash(secert || message) (hash值)
+  已知 secert 長度， message 內容，未知 secret 內容
+  可利用 hashpump 來算出 hash(secret || message || padding || XXXXX)
+ padding 做長度擴充， XXXXX 可填任意字串    用法   Input Signature : $\hspace{2em}$ 填入 hash(secert || message)
+  Input Data : $\hspace{3.8em}$ 填入 message
+  Input Key Length : $\hspace{1.4em}$ 填入 secert 長度
+  Input Data to Add : $\hspace{1.]]></description>
+</item></channel>
+</rss>

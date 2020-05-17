@@ -5,47 +5,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>RSA - d3m0&#39;s Blog</title>
-        <meta name="Description" content=""><meta property="og:title" content="RSA" />
-<meta property="og:description" content="RSA Parameters $$ n = p \times q $$
-$$ \phi(n) = (p-1) \times (q-1) $$
-$$ \gcd (e ,\ \phi (n)) = 1 $$
-$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$
-Note  選擇的 $e$ 必須與 $\phi (n)$ 互質   Encryption $$ M^{e} \equiv C \ (\bmod \ n) $$
-Decryption $$ C^{d} \equiv M \ (\bmod \ n) $$
-Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$" />
+        <title>ElGamal - d3m0&#39;s Blog</title>
+        <meta name="Description" content=""><meta property="og:title" content="ElGamal" />
+<meta property="og:description" content="ElGamal Key generation   選擇一個整數 $g$ ，和一個質數 $P$ $\hspace{0.8em} (0 &lt; g &lt; P)$
+  Bob 隨機選擇一個整數 $x$ 作為私鑰 $(0 &lt; x &lt; P)$
+  計算 $y = g^{x} \bmod P\ $ 作為 Bob 的公鑰
+  公鑰包含 $(y,g,P)$ ，私鑰為 $x$
+  Encryption   明文為 $m$
+  Alice 隨機選擇一個與 $P-1$ 互質的整數 $k$
+ $k$ 不可洩漏    計算 $C_{1} = g^{k} \bmod P$" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cycd3m0.github.io/posts/rsa/" />
-<meta property="article:published_time" content="2020-05-16T10:20:01+08:00" />
-<meta property="article:modified_time" content="2020-05-16T10:20:01+08:00" />
+<meta property="og:url" content="https://cycd3m0.github.io/posts/elgamal/" />
+<meta property="article:published_time" content="2020-05-17T04:28:47+08:00" />
+<meta property="article:modified_time" content="2020-05-17T04:28:47+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="RSA"/>
-<meta name="twitter:description" content="RSA Parameters $$ n = p \times q $$
-$$ \phi(n) = (p-1) \times (q-1) $$
-$$ \gcd (e ,\ \phi (n)) = 1 $$
-$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$
-Note  選擇的 $e$ 必須與 $\phi (n)$ 互質   Encryption $$ M^{e} \equiv C \ (\bmod \ n) $$
-Decryption $$ C^{d} \equiv M \ (\bmod \ n) $$
-Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
+<meta name="twitter:title" content="ElGamal"/>
+<meta name="twitter:description" content="ElGamal Key generation   選擇一個整數 $g$ ，和一個質數 $P$ $\hspace{0.8em} (0 &lt; g &lt; P)$
+  Bob 隨機選擇一個整數 $x$ 作為私鑰 $(0 &lt; x &lt; P)$
+  計算 $y = g^{x} \bmod P\ $ 作為 Bob 的公鑰
+  公鑰包含 $(y,g,P)$ ，私鑰為 $x$
+  Encryption   明文為 $m$
+  Alice 隨機選擇一個與 $P-1$ 互質的整數 $k$
+ $k$ 不可洩漏    計算 $C_{1} = g^{k} \bmod P$"/>
 <meta name="application-name" content="d3m0&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="d3m0&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/rsa/" /><link rel="prev" href="https://cycd3m0.github.io/posts/hugo-on-github/" /><link rel="next" href="https://cycd3m0.github.io/posts/group-ring-field/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/elgamal/" /><link rel="prev" href="https://cycd3m0.github.io/posts/diffie-hellman/" /><link rel="next" href="https://cycd3m0.github.io/posts/ecc/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "RSA",
+        "headline": "ElGamal",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/cycd3m0.github.io\/posts\/rsa\/"
+            "@id": "https:\/\/cycd3m0.github.io\/posts\/elgamal\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "crypto, asymmetric, RSA","wordcount":  255 ,
-        "url": "https:\/\/cycd3m0.github.io\/posts\/rsa\/","datePublished": "2020-05-16T10:20:01+08:00","dateModified": "2020-05-16T10:20:01+08:00","publisher": {
+            },"genre": "posts","keywords": "crypto, asymmetric","wordcount":  73 ,
+        "url": "https:\/\/cycd3m0.github.io\/posts\/elgamal\/","datePublished": "2020-05-17T04:28:47+08:00","dateModified": "2020-05-17T04:28:47+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -126,11 +126,11 @@ Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">RSA</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">ElGamal</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-16>2020-05-16</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 255 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-17>2020-05-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 73 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -138,206 +138,81 @@ Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#rsa">RSA</a>
+    <li><a href="#elgamal">ElGamal</a>
       <ul>
-        <li><a href="#parameters">Parameters</a></li>
+        <li><a href="#key-generation">Key generation</a></li>
         <li><a href="#encryption">Encryption</a></li>
         <li><a href="#decryption">Decryption</a></li>
-        <li><a href="#correctness">Correctness</a></li>
       </ul>
     </li>
-    <li><a href="#attacks">Attacks</a>
-      <ul>
-        <li><a href="#pollards-p-1">Pollard&rsquo;s p-1</a></li>
-        <li><a href="#williamss-p1">Williams&rsquo;s p+1</a></li>
-        <li><a href="#fermats-factorization">Fermat&rsquo;s factorization</a></li>
-        <li><a href="#wieners-attack">Wiener&rsquo;s attack</a></li>
-        <li><a href="#boneh-and-durfee-attack">Boneh and Durfee attack</a></li>
-        <li><a href="#common-factor-attack">Common factor attack</a></li>
-        <li><a href="#håstads-broadcast-attack">Håstad&rsquo;s broadcast attack</a></li>
-        <li><a href="#common-modulus-attack">Common modulus attack</a></li>
-        <li><a href="#franklin-reiter-related-message-attack">Franklin Reiter related message attack</a></li>
-        <li><a href="#coppersmith-shortpad-attack">Coppersmith shortpad attack</a></li>
-        <li><a href="#coppersmith-attack">Coppersmith attack</a></li>
-      </ul>
-    </li>
-    <li><a href="#tools">Tools</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="rsa">RSA</h2>
-<h3 id="parameters">Parameters</h3>
-<p>$$ n = p \times q $$</p>
-<p>$$ \phi(n) = (p-1) \times (q-1) $$</p>
-<p>$$ \gcd (e ,\ \phi (n)) = 1 $$</p>
-<p>$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$</p>
-<div class="details admonition note open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">選擇的 $e$ 必須與 $\phi (n)$ 互質</div>
-        </div>
-    </div>
+            </div><div class="content" id="content"><h2 id="elgamal">ElGamal</h2>
+<h3 id="key-generation">Key generation</h3>
+<ul>
+<li>
+<p>選擇一個整數 $g$ ，和一個質數 $P$ $\hspace{0.8em} (0 &lt; g &lt; P)$</p>
+</li>
+<li>
+<p>Bob 隨機選擇一個整數 $x$ 作為私鑰 $(0 &lt; x &lt; P)$</p>
+</li>
+<li>
+<p>計算 $y = g^{x} \bmod P\ $ 作為 Bob 的公鑰</p>
+</li>
+<li>
+<p><strong>公鑰包含 $(y,g,P)$ ，私鑰為 $x$</strong></p>
+</li>
+</ul>
 <h3 id="encryption">Encryption</h3>
-<p>$$ M^{e} \equiv C \ (\bmod \ n) $$</p>
+<ul>
+<li>
+<p>明文為 $m$</p>
+</li>
+<li>
+<p>Alice 隨機選擇一個與 $P-1$ 互質的整數 $k$</p>
+<ul>
+<li>$k$ 不可洩漏</li>
+</ul>
+</li>
+<li>
+<p>計算 $C_{1} = g^{k} \bmod P$</p>
+</li>
+<li>
+<p>計算 $C_{2} = m \times y^{k} \bmod P$</p>
+</li>
+<li>
+<p>Alice 將 $(C_{1},C_{2})$ 傳送給 Bob</p>
+</li>
+</ul>
 <h3 id="decryption">Decryption</h3>
-<p>$$ C^{d} \equiv M \ (\bmod \ n) $$</p>
-<h3 id="correctness">Correctness</h3>
-<p>$$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$</p>
-<p>$$ e \times d = 1 + k \times \phi(n) $$</p>
-<p>$$
-M^{ed} = M^{1 + k \times \phi(n)} = M \times M^{k \times \phi(n)} = M \times (M^{\phi(n)})^{k}
-$$</p>
-<p>$$
-M \times (M^{\phi(n)})^{k} \equiv M \times (1)^{k} = M \ (\bmod \ n)
-$$</p>
-<p>based on <a href="https://cycd3m0.github.io/posts/eulers-totient-function/#eulers-theorem" target="_blank" rel="noopener noreffer">Euler’s theorem</a></p>
-<br/>
-<h2 id="attacks">Attacks</h2>
-<h3 id="pollards-p-1">Pollard&rsquo;s p-1</h3>
 <ul>
-<li>當 $p-1$ 是 k-smooth ，且 k 很小，可以分解 $n$</li>
+<li>$m = C_{2} \times C_{1}^{-x} \bmod P$</li>
 </ul>
-<h3 id="williamss-p1">Williams&rsquo;s p+1</h3>
-<ul>
-<li>當 $p+1$ 是 k-smooth ，且 k 很小，可以分解 $n$</li>
-</ul>
-<h3 id="fermats-factorization">Fermat&rsquo;s factorization</h3>
-<ul>
-<li>如果 $p$ 和 $q$ 相近，可以分解 $n$</li>
-</ul>
-<h3 id="wieners-attack">Wiener&rsquo;s attack</h3>
-<ul>
-<li>如果 $d$ 很小，可以分解 $n$</li>
-</ul>
-<h3 id="boneh-and-durfee-attack">Boneh and Durfee attack</h3>
-<ul>
-<li>
-<p>如果 $d$ 很小，可以分解 $n$</p>
-</li>
-<li>
-<p>容忍度比 Wiener 大，但速度較慢</p>
-</li>
-</ul>
-<h3 id="common-factor-attack">Common factor attack</h3>
-<ul>
-<li>
-<p>有多個密文</p>
-</li>
-<li>
-<p>$\gcd(n_{1},&hellip;,n_{k}) \not = 1$</p>
-</li>
-</ul>
-<h3 id="håstads-broadcast-attack">Håstad&rsquo;s broadcast attack</h3>
-<ul>
-<li>
-<p>有多個密文</p>
-</li>
-<li>
-<p>$m_{1} = &hellip; = m_{k}$</p>
-</li>
-<li>
-<p>$n_{1} \not = &hellip; \not = n_{k}$</p>
-</li>
-<li>
-<p>$e_{1} = &hellip; = e_{k}$</p>
-</li>
-<li>
-<p>$k \ge e$</p>
-</li>
-</ul>
-<h3 id="common-modulus-attack">Common modulus attack</h3>
-<ul>
-<li>
-<p>有兩個密文</p>
-</li>
-<li>
-<p>$m_{1} = m_{2}$</p>
-</li>
-<li>
-<p>$n_{1} = n_{2}$</p>
-</li>
-<li>
-<p>$\gcd(e_{1},e_{2}) = 1$</p>
-</li>
-</ul>
-<h3 id="franklin-reiter-related-message-attack">Franklin Reiter related message attack</h3>
-<ul>
-<li>
-<p>有兩個密文</p>
-</li>
-<li>
-<p>$m_{1} = f(m_{2})$ ，兩個明文有線性關係</p>
-</li>
-<li>
-<p>$n_{1} = n_{2}$</p>
-</li>
-<li>
-<p>$e_{1} = e_{2}$</p>
-</li>
-</ul>
-<h3 id="coppersmith-shortpad-attack">Coppersmith shortpad attack</h3>
-<ul>
-<li>
-<p>有兩個密文</p>
-</li>
-<li>
-<p>兩個明文的差距不大，如相同明文加上不同的 padding</p>
-</li>
-<li>
-<p>$n_{1} = n_{2}$</p>
-</li>
-<li>
-<p>$e_{1} = e_{2}$</p>
-</li>
-</ul>
-<h3 id="coppersmith-attack">Coppersmith attack</h3>
-<ul>
-<li>
-<p>已知明文的高位</p>
-</li>
-<li>
-<p>有密文和 $(n,e)$</p>
-</li>
-</ul>
-<br/>
-<h2 id="tools">Tools</h2>
-<ul>
-<li>
-<p><a href="https://github.com/Ganapati/RsaCtfTool" target="_blank" rel="noopener noreffer">RsaCtfTool</a></p>
-</li>
-<li>
-<p><a href="https://github.com/maojui/Cytro" target="_blank" rel="noopener noreffer">Cytro</a></p>
-</li>
-</ul>
-<br/>
-<br/>
-<p>Reference : <a href="https://oalieno.github.io/old/" target="_blank" rel="noopener noreffer">oalieno</a></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-05-16</span>
+                <span>The article was updated on 2020-05-17</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/rsa/" data-title="RSA" data-via="d3m094035901" data-hashtags="crypto,asymmetric,RSA"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/rsa/" data-hashtag="crypto"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/rsa/" data-title="RSA"><i class="fab fa-line fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/elgamal/" data-title="ElGamal" data-via="d3m094035901" data-hashtags="crypto,asymmetric"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/elgamal/" data-hashtag="crypto"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/elgamal/" data-title="ElGamal"><i class="fab fa-line fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/asymmetric/">asymmetric</a>,&nbsp;<a href="/tags/rsa/">RSA</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/asymmetric/">asymmetric</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/hugo-on-github/" class="prev" rel="prev" title="Hugo on GitHub"><i class="fas fa-angle-left fa-fw"></i>Hugo on GitHub</a>
-            <a href="/posts/group-ring-field/" class="next" rel="next" title="Group-Ring-Field">Group-Ring-Field<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/diffie-hellman/" class="prev" rel="prev" title="Diffie Hellman"><i class="fas fa-angle-left fa-fw"></i>Diffie Hellman</a>
+            <a href="/posts/ecc/" class="next" rel="next" title="ECC">ECC<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">

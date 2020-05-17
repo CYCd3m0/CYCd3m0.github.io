@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ECC - Tag - d3m0&#39;s Blog</title>
+        <link>https://cycd3m0.github.io/tags/ecc/</link>
+        <description>ECC - Tag - d3m0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 May 2020 06:34:53 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/ecc/" rel="self" type="application/rss+xml" /><item>
+    <title>ECC</title>
+    <link>https://cycd3m0.github.io/posts/ecc/</link>
+    <pubDate>Sun, 17 May 2020 06:34:53 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/ecc/</guid>
+    <description><![CDATA[Elliptic Curve $$ y^{2} = x^{3} + ax + b \\ \text{where} \hspace{1em} 4a^{3} + 27b^{2} \not = 0 $$
+  單位元素 $0$ ，代表一個無窮遠的點
+  $P$ 的反元素 $-P$ ，代表 $P$ 對 $x$ 軸的鏡射
+ $P + (-P) = 0$     定義 $$ \lbrace (x,y) \isin \Bbb{R}^{2} \hspace{0.5em} | \hspace{0.5em} y^{2} = x^{3} + ax + b \hspace{0.5em} , \hspace{0.5em} 4a^{3} + 27b^{2} \not = 0 \rbrace \cup \lbrace 0 \rbrace $$]]></description>
+</item></channel>
+</rss>

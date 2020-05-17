@@ -3,7 +3,39 @@
         <title>math - Tag - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/tags/math/</link>
         <description>math - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 04 May 2020 02:14:13 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/math/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 16 May 2020 22:02:22 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/math/" rel="self" type="application/rss+xml" /><item>
+    <title>Number</title>
+    <link>https://cycd3m0.github.io/posts/number/</link>
+    <pubDate>Sat, 16 May 2020 22:02:22 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/number/</guid>
+    <description><![CDATA[數 $$ \Bbb{N} \sube \Bbb{Z} \sube \Bbb{Q} \sube \Bbb{R} \sube \Bbb{C} \\ \text{自然數} \sube \text{整數} \sube \text{有理數} \sube \text{實數} \sube \text{複數} $$
+$\Bbb{C} \hspace{1.1em}$ 複數
+$\Bbb{R} \hspace{1.1em}$ 實數
+$\Bbb{R}^{+} \hspace{0.5em}$ 正數
+$\Bbb{R}^{-} \hspace{0.5em}$ 負數
+$\Bbb{Q} \hspace{1.05em}$ 有理數
+$\Bbb{Z} \hspace{1.15em}$ 整數
+$\Bbb{Z}^{+} \hspace{0.5em}$ 正整數
+$\Bbb{Z}^{-} \hspace{0.5em}$ 負整數
+$\Bbb{N} \hspace{1.05em}$ 自然數 (包括正整數和 $0$)
+$\Bbb{I} \hspace{1.35em}$ 虛數]]></description>
+</item><item>
+    <title>Group-Ring-Field</title>
+    <link>https://cycd3m0.github.io/posts/group-ring-field/</link>
+    <pubDate>Sat, 16 May 2020 20:01:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/group-ring-field/</guid>
+    <description><![CDATA[Group 一個集合 $G$ 上的運算 $\times$ 滿足「Closure、Associativity、Identity、Inverse」四個性質
+我們稱 $(G,\times)$ 是一個 Group
+  Closure (封閉性)
+  對於集合 $G$ 當中的任意元素 $a$ 和 $b$ ，經過 $\times$ 運算的結果，必定也是集合 $G$ 的元素
+  $a \times b \isin G \hspace{1em},\hspace{1em} \forall\ a,b \isin G$
+    Associativity (結合律)
+  只要 operand 的位置不變，則運算順序不會造成影響 (即置換括號不會改變結果)
+  $(a \times b) \times c = a \times (b \times c) \hspace{1em},\hspace{1em} \forall\ a,b,c \isin G$
+    Identity (存在單位元素)]]></description>
+</item><item>
     <title>Euler’s totient function</title>
     <link>https://cycd3m0.github.io/posts/eulers-totient-function/</link>
     <pubDate>Mon, 04 May 2020 02:14:13 &#43;0800</pubDate>
@@ -21,7 +53,7 @@
     <pubDate>Mon, 04 May 2020 02:13:58 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://cycd3m0.github.io/posts/chinese-remainder-theorem/</guid>
-    <description><![CDATA[CRT $$ \begin{cases} x \equiv a_{1} \ ( \bmod \ m_{1} ) \\ x \equiv a_{2} \ ( \bmod \ m_{2} ) \\ \hspace{3.5em} \vdots \\ x \equiv a_{n} \ ( \bmod \ m_{n} ) \end{cases} $$
+    <description><![CDATA[Chinese Remainder Theorem $$ \begin{cases} x \equiv a_{1} \ ( \bmod \ m_{1} ) \\ x \equiv a_{2} \ ( \bmod \ m_{2} ) \\ \hspace{3.5em} \vdots \\ x \equiv a_{n} \ ( \bmod \ m_{n} ) \end{cases} $$
 已知合數 $M = m_{1} \times m_{2} \times \cdots \times m_{n}$
 $m_{1},m_{2}, \cdots ,m_{n}$ 為彼此互質的整數 ( $m_{i}$ 可為質數的 $k$ 次方，如 $m_{1} = 5^{3}$ )
  我們可以透過 $a_{1},a_{2}, \cdots ,a_{n}$ 以及 $m_{1},m_{2}, \cdots ,m_{n}$ 計算出 $A$]]></description>

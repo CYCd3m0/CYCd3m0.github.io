@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>DSA - Tag - d3m0&#39;s Blog</title>
+        <link>https://cycd3m0.github.io/tags/dsa/</link>
+        <description>DSA - Tag - d3m0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 May 2020 02:44:35 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/dsa/" rel="self" type="application/rss+xml" /><item>
+    <title>DSA</title>
+    <link>https://cycd3m0.github.io/posts/dsa/</link>
+    <pubDate>Sun, 17 May 2020 02:44:35 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/dsa/</guid>
+    <description><![CDATA[Key generation Parameter generation   選擇一個 hash function : $H$
+  選擇一個質數 : $q$
+  選擇一個質數 : $p\ $ ，使 $p-1$ 是 $q$ 的倍數
+  隨機選擇一個整數 $h$ $(1 &lt; h &lt; p-1)$
+ $h$ 一般選擇 $2$    計算 $g = h^{\frac{p-1}{q}} \ (\bmod\ p)$
+  如果計算出 $g = 1$ ，就換一個 $h$ 重新計算 $g$
+  $g$ 的 order 為 $q$
+    $(p,q,g)$ 是公開的資訊]]></description>
+</item></channel>
+</rss>

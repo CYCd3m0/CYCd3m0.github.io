@@ -3,7 +3,103 @@
         <title>d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/</link>
         <description>d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 16 May 2020 10:20:01 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 May 2020 06:34:53 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>ECC</title>
+    <link>https://cycd3m0.github.io/posts/ecc/</link>
+    <pubDate>Sun, 17 May 2020 06:34:53 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/ecc/</guid>
+    <description><![CDATA[Elliptic Curve $$ y^{2} = x^{3} + ax + b \\ \text{where} \hspace{1em} 4a^{3} + 27b^{2} \not = 0 $$
+  單位元素 $0$ ，代表一個無窮遠的點
+  $P$ 的反元素 $-P$ ，代表 $P$ 對 $x$ 軸的鏡射
+ $P + (-P) = 0$     定義 $$ \lbrace (x,y) \isin \Bbb{R}^{2} \hspace{0.5em} | \hspace{0.5em} y^{2} = x^{3} + ax + b \hspace{0.5em} , \hspace{0.5em} 4a^{3} + 27b^{2} \not = 0 \rbrace \cup \lbrace 0 \rbrace $$]]></description>
+</item><item>
+    <title>ElGamal</title>
+    <link>https://cycd3m0.github.io/posts/elgamal/</link>
+    <pubDate>Sun, 17 May 2020 04:28:47 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/elgamal/</guid>
+    <description><![CDATA[ElGamal Key generation   選擇一個整數 $g$ ，和一個質數 $P$ $\hspace{0.8em} (0 &lt; g &lt; P)$
+  Bob 隨機選擇一個整數 $x$ 作為私鑰 $(0 &lt; x &lt; P)$
+  計算 $y = g^{x} \bmod P\ $ 作為 Bob 的公鑰
+  公鑰包含 $(y,g,P)$ ，私鑰為 $x$
+  Encryption   明文為 $m$
+  Alice 隨機選擇一個與 $P-1$ 互質的整數 $k$
+ $k$ 不可洩漏    計算 $C_{1} = g^{k} \bmod P$]]></description>
+</item><item>
+    <title>Diffie Hellman</title>
+    <link>https://cycd3m0.github.io/posts/diffie-hellman/</link>
+    <pubDate>Sun, 17 May 2020 03:54:38 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/diffie-hellman/</guid>
+    <description><![CDATA[Diffie-Hellman key exchange   選擇一個質數 $p$ ，和一個整數 $g$
+ $(p,g)$ 是公開的資訊    Alice 隨機選擇一個整數 $a$ 作為私鑰，並計算 $A = g^{a} \bmod p$ 傳送給 Bob
+  $a$ 是 Alice 的私鑰
+  $A$ 是可公開的資訊
+    Bob 隨機選擇一個整數 $b$ 作為私鑰，並計算 $B = g^{b} \bmod p$ 傳送給 Alice
+  $b$ 是 Bob 的私鑰
+  $B$ 是可公開的資訊
+    Alice 計算 $s = B^{a} \bmod p$]]></description>
+</item><item>
+    <title>Hashpump Usage</title>
+    <link>https://cycd3m0.github.io/posts/hashpump-usage/</link>
+    <pubDate>Sun, 17 May 2020 03:36:30 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/hashpump-usage/</guid>
+    <description><![CDATA[條件   已知 hash(secert || message) (hash值)
+  已知 secert 長度， message 內容，未知 secret 內容
+  可利用 hashpump 來算出 hash(secret || message || padding || XXXXX)
+ padding 做長度擴充， XXXXX 可填任意字串    用法   Input Signature : $\hspace{2em}$ 填入 hash(secert || message)
+  Input Data : $\hspace{3.8em}$ 填入 message
+  Input Key Length : $\hspace{1.4em}$ 填入 secert 長度
+  Input Data to Add : $\hspace{1.]]></description>
+</item><item>
+    <title>DSA</title>
+    <link>https://cycd3m0.github.io/posts/dsa/</link>
+    <pubDate>Sun, 17 May 2020 02:44:35 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/dsa/</guid>
+    <description><![CDATA[Key generation Parameter generation   選擇一個 hash function : $H$
+  選擇一個質數 : $q$
+  選擇一個質數 : $p\ $ ，使 $p-1$ 是 $q$ 的倍數
+  隨機選擇一個整數 $h$ $(1 &lt; h &lt; p-1)$
+ $h$ 一般選擇 $2$    計算 $g = h^{\frac{p-1}{q}} \ (\bmod\ p)$
+  如果計算出 $g = 1$ ，就換一個 $h$ 重新計算 $g$
+  $g$ 的 order 為 $q$
+    $(p,q,g)$ 是公開的資訊]]></description>
+</item><item>
+    <title>Number</title>
+    <link>https://cycd3m0.github.io/posts/number/</link>
+    <pubDate>Sat, 16 May 2020 22:02:22 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/number/</guid>
+    <description><![CDATA[數 $$ \Bbb{N} \sube \Bbb{Z} \sube \Bbb{Q} \sube \Bbb{R} \sube \Bbb{C} \\ \text{自然數} \sube \text{整數} \sube \text{有理數} \sube \text{實數} \sube \text{複數} $$
+$\Bbb{C} \hspace{1.1em}$ 複數
+$\Bbb{R} \hspace{1.1em}$ 實數
+$\Bbb{R}^{+} \hspace{0.5em}$ 正數
+$\Bbb{R}^{-} \hspace{0.5em}$ 負數
+$\Bbb{Q} \hspace{1.05em}$ 有理數
+$\Bbb{Z} \hspace{1.15em}$ 整數
+$\Bbb{Z}^{+} \hspace{0.5em}$ 正整數
+$\Bbb{Z}^{-} \hspace{0.5em}$ 負整數
+$\Bbb{N} \hspace{1.05em}$ 自然數 (包括正整數和 $0$)
+$\Bbb{I} \hspace{1.35em}$ 虛數]]></description>
+</item><item>
+    <title>Group-Ring-Field</title>
+    <link>https://cycd3m0.github.io/posts/group-ring-field/</link>
+    <pubDate>Sat, 16 May 2020 20:01:15 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/group-ring-field/</guid>
+    <description><![CDATA[Group 一個集合 $G$ 上的運算 $\times$ 滿足「Closure、Associativity、Identity、Inverse」四個性質
+我們稱 $(G,\times)$ 是一個 Group
+  Closure (封閉性)
+  對於集合 $G$ 當中的任意元素 $a$ 和 $b$ ，經過 $\times$ 運算的結果，必定也是集合 $G$ 的元素
+  $a \times b \isin G \hspace{1em},\hspace{1em} \forall\ a,b \isin G$
+    Associativity (結合律)
+  只要 operand 的位置不變，則運算順序不會造成影響 (即置換括號不會改變結果)
+  $(a \times b) \times c = a \times (b \times c) \hspace{1em},\hspace{1em} \forall\ a,b,c \isin G$
+    Identity (存在單位元素)]]></description>
+</item><item>
     <title>RSA</title>
     <link>https://cycd3m0.github.io/posts/rsa/</link>
     <pubDate>Sat, 16 May 2020 10:20:01 &#43;0800</pubDate>
@@ -40,15 +136,5 @@ Basic   建立一個空的資料夾 (下面以 hugo-blog 為例)
   $\phi(p^{k}) = p^{k} - p^{k-1}$
     如果 $n = p \times q \times r$ ( $p , q , r$ 皆為質數)
  $\phi(n) = \phi(p) \times \phi(q) \times \phi(r)$     Example $ \phi(90) = \phi(2) \times \phi(3^{2}) \times \phi(5) \\ \hspace{2.]]></description>
-</item><item>
-    <title>Chinese Remainder Theorem</title>
-    <link>https://cycd3m0.github.io/posts/chinese-remainder-theorem/</link>
-    <pubDate>Mon, 04 May 2020 02:13:58 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/posts/chinese-remainder-theorem/</guid>
-    <description><![CDATA[CRT $$ \begin{cases} x \equiv a_{1} \ ( \bmod \ m_{1} ) \\ x \equiv a_{2} \ ( \bmod \ m_{2} ) \\ \hspace{3.5em} \vdots \\ x \equiv a_{n} \ ( \bmod \ m_{n} ) \end{cases} $$
-已知合數 $M = m_{1} \times m_{2} \times \cdots \times m_{n}$
-$m_{1},m_{2}, \cdots ,m_{n}$ 為彼此互質的整數 ( $m_{i}$ 可為質數的 $k$ 次方，如 $m_{1} = 5^{3}$ )
- 我們可以透過 $a_{1},a_{2}, \cdots ,a_{n}$ 以及 $m_{1},m_{2}, \cdots ,m_{n}$ 計算出 $A$]]></description>
 </item></channel>
 </rss>

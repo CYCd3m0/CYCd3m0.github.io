@@ -5,47 +5,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>RSA - d3m0&#39;s Blog</title>
-        <meta name="Description" content=""><meta property="og:title" content="RSA" />
-<meta property="og:description" content="RSA Parameters $$ n = p \times q $$
-$$ \phi(n) = (p-1) \times (q-1) $$
-$$ \gcd (e ,\ \phi (n)) = 1 $$
-$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$
-Note  選擇的 $e$ 必須與 $\phi (n)$ 互質   Encryption $$ M^{e} \equiv C \ (\bmod \ n) $$
-Decryption $$ C^{d} \equiv M \ (\bmod \ n) $$
-Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$" />
+        <title>Hashpump Usage - d3m0&#39;s Blog</title>
+        <meta name="Description" content=""><meta property="og:title" content="Hashpump Usage" />
+<meta property="og:description" content="條件   已知 hash(secert || message) (hash值)
+  已知 secert 長度， message 內容，未知 secret 內容
+  可利用 hashpump 來算出 hash(secret || message || padding || XXXXX)
+ padding 做長度擴充， XXXXX 可填任意字串    用法   Input Signature : $\hspace{2em}$ 填入 hash(secert || message)
+  Input Data : $\hspace{3.8em}$ 填入 message
+  Input Key Length : $\hspace{1.4em}$ 填入 secert 長度
+  Input Data to Add : $\hspace{1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cycd3m0.github.io/posts/rsa/" />
-<meta property="article:published_time" content="2020-05-16T10:20:01+08:00" />
-<meta property="article:modified_time" content="2020-05-16T10:20:01+08:00" />
+<meta property="og:url" content="https://cycd3m0.github.io/posts/hashpump-usage/" />
+<meta property="article:published_time" content="2020-05-17T03:36:30+08:00" />
+<meta property="article:modified_time" content="2020-05-17T03:36:30+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="RSA"/>
-<meta name="twitter:description" content="RSA Parameters $$ n = p \times q $$
-$$ \phi(n) = (p-1) \times (q-1) $$
-$$ \gcd (e ,\ \phi (n)) = 1 $$
-$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$
-Note  選擇的 $e$ 必須與 $\phi (n)$ 互質   Encryption $$ M^{e} \equiv C \ (\bmod \ n) $$
-Decryption $$ C^{d} \equiv M \ (\bmod \ n) $$
-Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
+<meta name="twitter:title" content="Hashpump Usage"/>
+<meta name="twitter:description" content="條件   已知 hash(secert || message) (hash值)
+  已知 secert 長度， message 內容，未知 secret 內容
+  可利用 hashpump 來算出 hash(secret || message || padding || XXXXX)
+ padding 做長度擴充， XXXXX 可填任意字串    用法   Input Signature : $\hspace{2em}$ 填入 hash(secert || message)
+  Input Data : $\hspace{3.8em}$ 填入 message
+  Input Key Length : $\hspace{1.4em}$ 填入 secert 長度
+  Input Data to Add : $\hspace{1."/>
 <meta name="application-name" content="d3m0&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="d3m0&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/rsa/" /><link rel="prev" href="https://cycd3m0.github.io/posts/hugo-on-github/" /><link rel="next" href="https://cycd3m0.github.io/posts/group-ring-field/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/hashpump-usage/" /><link rel="prev" href="https://cycd3m0.github.io/posts/dsa/" /><link rel="next" href="https://cycd3m0.github.io/posts/diffie-hellman/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "RSA",
+        "headline": "Hashpump Usage",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/cycd3m0.github.io\/posts\/rsa\/"
+            "@id": "https:\/\/cycd3m0.github.io\/posts\/hashpump-usage\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "crypto, asymmetric, RSA","wordcount":  255 ,
-        "url": "https:\/\/cycd3m0.github.io\/posts\/rsa\/","datePublished": "2020-05-16T10:20:01+08:00","dateModified": "2020-05-16T10:20:01+08:00","publisher": {
+            },"genre": "posts","keywords": "crypto, hashpump, LEA","wordcount":  73 ,
+        "url": "https:\/\/cycd3m0.github.io\/posts\/hashpump-usage\/","datePublished": "2020-05-17T03:36:30+08:00","dateModified": "2020-05-17T03:36:30+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -126,11 +126,11 @@ Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">RSA</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Hashpump Usage</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-16>2020-05-16</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 255 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-17>2020-05-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 73 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -138,206 +138,75 @@ Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#rsa">RSA</a>
-      <ul>
-        <li><a href="#parameters">Parameters</a></li>
-        <li><a href="#encryption">Encryption</a></li>
-        <li><a href="#decryption">Decryption</a></li>
-        <li><a href="#correctness">Correctness</a></li>
-      </ul>
-    </li>
-    <li><a href="#attacks">Attacks</a>
-      <ul>
-        <li><a href="#pollards-p-1">Pollard&rsquo;s p-1</a></li>
-        <li><a href="#williamss-p1">Williams&rsquo;s p+1</a></li>
-        <li><a href="#fermats-factorization">Fermat&rsquo;s factorization</a></li>
-        <li><a href="#wieners-attack">Wiener&rsquo;s attack</a></li>
-        <li><a href="#boneh-and-durfee-attack">Boneh and Durfee attack</a></li>
-        <li><a href="#common-factor-attack">Common factor attack</a></li>
-        <li><a href="#håstads-broadcast-attack">Håstad&rsquo;s broadcast attack</a></li>
-        <li><a href="#common-modulus-attack">Common modulus attack</a></li>
-        <li><a href="#franklin-reiter-related-message-attack">Franklin Reiter related message attack</a></li>
-        <li><a href="#coppersmith-shortpad-attack">Coppersmith shortpad attack</a></li>
-        <li><a href="#coppersmith-attack">Coppersmith attack</a></li>
-      </ul>
-    </li>
-    <li><a href="#tools">Tools</a></li>
+    <li><a href="#條件">條件</a></li>
+    <li><a href="#用法">用法</a></li>
+    <li><a href="#輸出">輸出</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="rsa">RSA</h2>
-<h3 id="parameters">Parameters</h3>
-<p>$$ n = p \times q $$</p>
-<p>$$ \phi(n) = (p-1) \times (q-1) $$</p>
-<p>$$ \gcd (e ,\ \phi (n)) = 1 $$</p>
-<p>$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$</p>
-<div class="details admonition note open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">選擇的 $e$ 必須與 $\phi (n)$ 互質</div>
-        </div>
-    </div>
-<h3 id="encryption">Encryption</h3>
-<p>$$ M^{e} \equiv C \ (\bmod \ n) $$</p>
-<h3 id="decryption">Decryption</h3>
-<p>$$ C^{d} \equiv M \ (\bmod \ n) $$</p>
-<h3 id="correctness">Correctness</h3>
-<p>$$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$</p>
-<p>$$ e \times d = 1 + k \times \phi(n) $$</p>
-<p>$$
-M^{ed} = M^{1 + k \times \phi(n)} = M \times M^{k \times \phi(n)} = M \times (M^{\phi(n)})^{k}
-$$</p>
-<p>$$
-M \times (M^{\phi(n)})^{k} \equiv M \times (1)^{k} = M \ (\bmod \ n)
-$$</p>
-<p>based on <a href="https://cycd3m0.github.io/posts/eulers-totient-function/#eulers-theorem" target="_blank" rel="noopener noreffer">Euler’s theorem</a></p>
-<br/>
-<h2 id="attacks">Attacks</h2>
-<h3 id="pollards-p-1">Pollard&rsquo;s p-1</h3>
-<ul>
-<li>當 $p-1$ 是 k-smooth ，且 k 很小，可以分解 $n$</li>
-</ul>
-<h3 id="williamss-p1">Williams&rsquo;s p+1</h3>
-<ul>
-<li>當 $p+1$ 是 k-smooth ，且 k 很小，可以分解 $n$</li>
-</ul>
-<h3 id="fermats-factorization">Fermat&rsquo;s factorization</h3>
-<ul>
-<li>如果 $p$ 和 $q$ 相近，可以分解 $n$</li>
-</ul>
-<h3 id="wieners-attack">Wiener&rsquo;s attack</h3>
-<ul>
-<li>如果 $d$ 很小，可以分解 $n$</li>
-</ul>
-<h3 id="boneh-and-durfee-attack">Boneh and Durfee attack</h3>
+            </div><div class="content" id="content"><h2 id="條件">條件</h2>
 <ul>
 <li>
-<p>如果 $d$ 很小，可以分解 $n$</p>
+<p>已知 hash(secert || message) (hash值)</p>
 </li>
 <li>
-<p>容忍度比 Wiener 大，但速度較慢</p>
+<p>已知 secert 長度， message 內容，未知 secret 內容</p>
+</li>
+<li>
+<p>可利用 hashpump 來算出 hash(secret || message || padding || XXXXX)</p>
+<ul>
+<li>padding 做長度擴充， XXXXX 可填任意字串</li>
+</ul>
 </li>
 </ul>
-<h3 id="common-factor-attack">Common factor attack</h3>
+<h2 id="用法">用法</h2>
 <ul>
 <li>
-<p>有多個密文</p>
+<p>Input Signature : $\hspace{2em}$ 填入 hash(secert || message)</p>
 </li>
 <li>
-<p>$\gcd(n_{1},&hellip;,n_{k}) \not = 1$</p>
+<p>Input Data : $\hspace{3.8em}$ 填入 message</p>
+</li>
+<li>
+<p>Input Key Length : $\hspace{1.4em}$ 填入 secert 長度</p>
+</li>
+<li>
+<p>Input Data to Add : $\hspace{1.2em}$ 填入想加入的 XXXXX</p>
 </li>
 </ul>
-<h3 id="håstads-broadcast-attack">Håstad&rsquo;s broadcast attack</h3>
+<h2 id="輸出">輸出</h2>
 <ul>
 <li>
-<p>有多個密文</p>
+<p>輸出第一行為 hash(secret || message || padding || XXXXX)</p>
 </li>
 <li>
-<p>$m_{1} = &hellip; = m_{k}$</p>
-</li>
-<li>
-<p>$n_{1} \not = &hellip; \not = n_{k}$</p>
-</li>
-<li>
-<p>$e_{1} = &hellip; = e_{k}$</p>
-</li>
-<li>
-<p>$k \ge e$</p>
+<p>輸出第二行為 message || padding || XXXXX</p>
 </li>
 </ul>
-<h3 id="common-modulus-attack">Common modulus attack</h3>
-<ul>
-<li>
-<p>有兩個密文</p>
-</li>
-<li>
-<p>$m_{1} = m_{2}$</p>
-</li>
-<li>
-<p>$n_{1} = n_{2}$</p>
-</li>
-<li>
-<p>$\gcd(e_{1},e_{2}) = 1$</p>
-</li>
-</ul>
-<h3 id="franklin-reiter-related-message-attack">Franklin Reiter related message attack</h3>
-<ul>
-<li>
-<p>有兩個密文</p>
-</li>
-<li>
-<p>$m_{1} = f(m_{2})$ ，兩個明文有線性關係</p>
-</li>
-<li>
-<p>$n_{1} = n_{2}$</p>
-</li>
-<li>
-<p>$e_{1} = e_{2}$</p>
-</li>
-</ul>
-<h3 id="coppersmith-shortpad-attack">Coppersmith shortpad attack</h3>
-<ul>
-<li>
-<p>有兩個密文</p>
-</li>
-<li>
-<p>兩個明文的差距不大，如相同明文加上不同的 padding</p>
-</li>
-<li>
-<p>$n_{1} = n_{2}$</p>
-</li>
-<li>
-<p>$e_{1} = e_{2}$</p>
-</li>
-</ul>
-<h3 id="coppersmith-attack">Coppersmith attack</h3>
-<ul>
-<li>
-<p>已知明文的高位</p>
-</li>
-<li>
-<p>有密文和 $(n,e)$</p>
-</li>
-</ul>
-<br/>
-<h2 id="tools">Tools</h2>
-<ul>
-<li>
-<p><a href="https://github.com/Ganapati/RsaCtfTool" target="_blank" rel="noopener noreffer">RsaCtfTool</a></p>
-</li>
-<li>
-<p><a href="https://github.com/maojui/Cytro" target="_blank" rel="noopener noreffer">Cytro</a></p>
-</li>
-</ul>
-<br/>
-<br/>
-<p>Reference : <a href="https://oalieno.github.io/old/" target="_blank" rel="noopener noreffer">oalieno</a></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-05-16</span>
+                <span>The article was updated on 2020-05-17</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/rsa/" data-title="RSA" data-via="d3m094035901" data-hashtags="crypto,asymmetric,RSA"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/rsa/" data-hashtag="crypto"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/rsa/" data-title="RSA"><i class="fab fa-line fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/hashpump-usage/" data-title="Hashpump Usage" data-via="d3m094035901" data-hashtags="crypto,hashpump,LEA"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/hashpump-usage/" data-hashtag="crypto"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/hashpump-usage/" data-title="Hashpump Usage"><i class="fab fa-line fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/asymmetric/">asymmetric</a>,&nbsp;<a href="/tags/rsa/">RSA</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/hashpump/">hashpump</a>,&nbsp;<a href="/tags/lea/">LEA</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/hugo-on-github/" class="prev" rel="prev" title="Hugo on GitHub"><i class="fas fa-angle-left fa-fw"></i>Hugo on GitHub</a>
-            <a href="/posts/group-ring-field/" class="next" rel="next" title="Group-Ring-Field">Group-Ring-Field<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/dsa/" class="prev" rel="prev" title="DSA"><i class="fas fa-angle-left fa-fw"></i>DSA</a>
+            <a href="/posts/diffie-hellman/" class="next" rel="next" title="Diffie Hellman">Diffie Hellman<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">

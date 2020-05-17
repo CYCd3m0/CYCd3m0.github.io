@@ -5,47 +5,55 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>RSA - d3m0&#39;s Blog</title>
-        <meta name="Description" content=""><meta property="og:title" content="RSA" />
-<meta property="og:description" content="RSA Parameters $$ n = p \times q $$
-$$ \phi(n) = (p-1) \times (q-1) $$
-$$ \gcd (e ,\ \phi (n)) = 1 $$
-$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$
-Note  選擇的 $e$ 必須與 $\phi (n)$ 互質   Encryption $$ M^{e} \equiv C \ (\bmod \ n) $$
-Decryption $$ C^{d} \equiv M \ (\bmod \ n) $$
-Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$" />
+        <title>Number - d3m0&#39;s Blog</title>
+        <meta name="Description" content=""><meta property="og:title" content="Number" />
+<meta property="og:description" content="數 $$ \Bbb{N} \sube \Bbb{Z} \sube \Bbb{Q} \sube \Bbb{R} \sube \Bbb{C} \\ \text{自然數} \sube \text{整數} \sube \text{有理數} \sube \text{實數} \sube \text{複數} $$
+$\Bbb{C} \hspace{1.1em}$ 複數
+$\Bbb{R} \hspace{1.1em}$ 實數
+$\Bbb{R}^{&#43;} \hspace{0.5em}$ 正數
+$\Bbb{R}^{-} \hspace{0.5em}$ 負數
+$\Bbb{Q} \hspace{1.05em}$ 有理數
+$\Bbb{Z} \hspace{1.15em}$ 整數
+$\Bbb{Z}^{&#43;} \hspace{0.5em}$ 正整數
+$\Bbb{Z}^{-} \hspace{0.5em}$ 負整數
+$\Bbb{N} \hspace{1.05em}$ 自然數 (包括正整數和 $0$)
+$\Bbb{I} \hspace{1.35em}$ 虛數" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cycd3m0.github.io/posts/rsa/" />
-<meta property="article:published_time" content="2020-05-16T10:20:01+08:00" />
-<meta property="article:modified_time" content="2020-05-16T10:20:01+08:00" />
+<meta property="og:url" content="https://cycd3m0.github.io/posts/number/" />
+<meta property="article:published_time" content="2020-05-16T22:02:22+08:00" />
+<meta property="article:modified_time" content="2020-05-16T22:02:22+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="RSA"/>
-<meta name="twitter:description" content="RSA Parameters $$ n = p \times q $$
-$$ \phi(n) = (p-1) \times (q-1) $$
-$$ \gcd (e ,\ \phi (n)) = 1 $$
-$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$
-Note  選擇的 $e$ 必須與 $\phi (n)$ 互質   Encryption $$ M^{e} \equiv C \ (\bmod \ n) $$
-Decryption $$ C^{d} \equiv M \ (\bmod \ n) $$
-Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
+<meta name="twitter:title" content="Number"/>
+<meta name="twitter:description" content="數 $$ \Bbb{N} \sube \Bbb{Z} \sube \Bbb{Q} \sube \Bbb{R} \sube \Bbb{C} \\ \text{自然數} \sube \text{整數} \sube \text{有理數} \sube \text{實數} \sube \text{複數} $$
+$\Bbb{C} \hspace{1.1em}$ 複數
+$\Bbb{R} \hspace{1.1em}$ 實數
+$\Bbb{R}^{&#43;} \hspace{0.5em}$ 正數
+$\Bbb{R}^{-} \hspace{0.5em}$ 負數
+$\Bbb{Q} \hspace{1.05em}$ 有理數
+$\Bbb{Z} \hspace{1.15em}$ 整數
+$\Bbb{Z}^{&#43;} \hspace{0.5em}$ 正整數
+$\Bbb{Z}^{-} \hspace{0.5em}$ 負整數
+$\Bbb{N} \hspace{1.05em}$ 自然數 (包括正整數和 $0$)
+$\Bbb{I} \hspace{1.35em}$ 虛數"/>
 <meta name="application-name" content="d3m0&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="d3m0&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/rsa/" /><link rel="prev" href="https://cycd3m0.github.io/posts/hugo-on-github/" /><link rel="next" href="https://cycd3m0.github.io/posts/group-ring-field/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/number/" /><link rel="prev" href="https://cycd3m0.github.io/posts/group-ring-field/" /><link rel="next" href="https://cycd3m0.github.io/posts/dsa/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "RSA",
+        "headline": "Number",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/cycd3m0.github.io\/posts\/rsa\/"
+            "@id": "https:\/\/cycd3m0.github.io\/posts\/number\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "crypto, asymmetric, RSA","wordcount":  255 ,
-        "url": "https:\/\/cycd3m0.github.io\/posts\/rsa\/","datePublished": "2020-05-16T10:20:01+08:00","dateModified": "2020-05-16T10:20:01+08:00","publisher": {
+            },"genre": "posts","keywords": "math","wordcount":  54 ,
+        "url": "https:\/\/cycd3m0.github.io\/posts\/number\/","datePublished": "2020-05-16T22:02:22+08:00","dateModified": "2020-05-16T22:02:22+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -126,11 +134,11 @@ Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">RSA</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Number</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-16>2020-05-16</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 255 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
+                <i class="fas fa-pencil-alt fa-fw"></i>about 54 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -138,181 +146,24 @@ Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#rsa">RSA</a>
-      <ul>
-        <li><a href="#parameters">Parameters</a></li>
-        <li><a href="#encryption">Encryption</a></li>
-        <li><a href="#decryption">Decryption</a></li>
-        <li><a href="#correctness">Correctness</a></li>
-      </ul>
-    </li>
-    <li><a href="#attacks">Attacks</a>
-      <ul>
-        <li><a href="#pollards-p-1">Pollard&rsquo;s p-1</a></li>
-        <li><a href="#williamss-p1">Williams&rsquo;s p+1</a></li>
-        <li><a href="#fermats-factorization">Fermat&rsquo;s factorization</a></li>
-        <li><a href="#wieners-attack">Wiener&rsquo;s attack</a></li>
-        <li><a href="#boneh-and-durfee-attack">Boneh and Durfee attack</a></li>
-        <li><a href="#common-factor-attack">Common factor attack</a></li>
-        <li><a href="#håstads-broadcast-attack">Håstad&rsquo;s broadcast attack</a></li>
-        <li><a href="#common-modulus-attack">Common modulus attack</a></li>
-        <li><a href="#franklin-reiter-related-message-attack">Franklin Reiter related message attack</a></li>
-        <li><a href="#coppersmith-shortpad-attack">Coppersmith shortpad attack</a></li>
-        <li><a href="#coppersmith-attack">Coppersmith attack</a></li>
-      </ul>
-    </li>
-    <li><a href="#tools">Tools</a></li>
+    <li><a href="#數">數</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="rsa">RSA</h2>
-<h3 id="parameters">Parameters</h3>
-<p>$$ n = p \times q $$</p>
-<p>$$ \phi(n) = (p-1) \times (q-1) $$</p>
-<p>$$ \gcd (e ,\ \phi (n)) = 1 $$</p>
-<p>$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$</p>
-<div class="details admonition note open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">選擇的 $e$ 必須與 $\phi (n)$ 互質</div>
-        </div>
-    </div>
-<h3 id="encryption">Encryption</h3>
-<p>$$ M^{e} \equiv C \ (\bmod \ n) $$</p>
-<h3 id="decryption">Decryption</h3>
-<p>$$ C^{d} \equiv M \ (\bmod \ n) $$</p>
-<h3 id="correctness">Correctness</h3>
-<p>$$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$</p>
-<p>$$ e \times d = 1 + k \times \phi(n) $$</p>
+            </div><div class="content" id="content"><h2 id="數">數</h2>
 <p>$$
-M^{ed} = M^{1 + k \times \phi(n)} = M \times M^{k \times \phi(n)} = M \times (M^{\phi(n)})^{k}
+\Bbb{N} \sube \Bbb{Z} \sube \Bbb{Q} \sube \Bbb{R} \sube \Bbb{C} \\
+\text{自然數} \sube \text{整數} \sube \text{有理數} \sube \text{實數} \sube \text{複數}
 $$</p>
-<p>$$
-M \times (M^{\phi(n)})^{k} \equiv M \times (1)^{k} = M \ (\bmod \ n)
-$$</p>
-<p>based on <a href="https://cycd3m0.github.io/posts/eulers-totient-function/#eulers-theorem" target="_blank" rel="noopener noreffer">Euler’s theorem</a></p>
-<br/>
-<h2 id="attacks">Attacks</h2>
-<h3 id="pollards-p-1">Pollard&rsquo;s p-1</h3>
-<ul>
-<li>當 $p-1$ 是 k-smooth ，且 k 很小，可以分解 $n$</li>
-</ul>
-<h3 id="williamss-p1">Williams&rsquo;s p+1</h3>
-<ul>
-<li>當 $p+1$ 是 k-smooth ，且 k 很小，可以分解 $n$</li>
-</ul>
-<h3 id="fermats-factorization">Fermat&rsquo;s factorization</h3>
-<ul>
-<li>如果 $p$ 和 $q$ 相近，可以分解 $n$</li>
-</ul>
-<h3 id="wieners-attack">Wiener&rsquo;s attack</h3>
-<ul>
-<li>如果 $d$ 很小，可以分解 $n$</li>
-</ul>
-<h3 id="boneh-and-durfee-attack">Boneh and Durfee attack</h3>
-<ul>
-<li>
-<p>如果 $d$ 很小，可以分解 $n$</p>
-</li>
-<li>
-<p>容忍度比 Wiener 大，但速度較慢</p>
-</li>
-</ul>
-<h3 id="common-factor-attack">Common factor attack</h3>
-<ul>
-<li>
-<p>有多個密文</p>
-</li>
-<li>
-<p>$\gcd(n_{1},&hellip;,n_{k}) \not = 1$</p>
-</li>
-</ul>
-<h3 id="håstads-broadcast-attack">Håstad&rsquo;s broadcast attack</h3>
-<ul>
-<li>
-<p>有多個密文</p>
-</li>
-<li>
-<p>$m_{1} = &hellip; = m_{k}$</p>
-</li>
-<li>
-<p>$n_{1} \not = &hellip; \not = n_{k}$</p>
-</li>
-<li>
-<p>$e_{1} = &hellip; = e_{k}$</p>
-</li>
-<li>
-<p>$k \ge e$</p>
-</li>
-</ul>
-<h3 id="common-modulus-attack">Common modulus attack</h3>
-<ul>
-<li>
-<p>有兩個密文</p>
-</li>
-<li>
-<p>$m_{1} = m_{2}$</p>
-</li>
-<li>
-<p>$n_{1} = n_{2}$</p>
-</li>
-<li>
-<p>$\gcd(e_{1},e_{2}) = 1$</p>
-</li>
-</ul>
-<h3 id="franklin-reiter-related-message-attack">Franklin Reiter related message attack</h3>
-<ul>
-<li>
-<p>有兩個密文</p>
-</li>
-<li>
-<p>$m_{1} = f(m_{2})$ ，兩個明文有線性關係</p>
-</li>
-<li>
-<p>$n_{1} = n_{2}$</p>
-</li>
-<li>
-<p>$e_{1} = e_{2}$</p>
-</li>
-</ul>
-<h3 id="coppersmith-shortpad-attack">Coppersmith shortpad attack</h3>
-<ul>
-<li>
-<p>有兩個密文</p>
-</li>
-<li>
-<p>兩個明文的差距不大，如相同明文加上不同的 padding</p>
-</li>
-<li>
-<p>$n_{1} = n_{2}$</p>
-</li>
-<li>
-<p>$e_{1} = e_{2}$</p>
-</li>
-</ul>
-<h3 id="coppersmith-attack">Coppersmith attack</h3>
-<ul>
-<li>
-<p>已知明文的高位</p>
-</li>
-<li>
-<p>有密文和 $(n,e)$</p>
-</li>
-</ul>
-<br/>
-<h2 id="tools">Tools</h2>
-<ul>
-<li>
-<p><a href="https://github.com/Ganapati/RsaCtfTool" target="_blank" rel="noopener noreffer">RsaCtfTool</a></p>
-</li>
-<li>
-<p><a href="https://github.com/maojui/Cytro" target="_blank" rel="noopener noreffer">Cytro</a></p>
-</li>
-</ul>
-<br/>
-<br/>
-<p>Reference : <a href="https://oalieno.github.io/old/" target="_blank" rel="noopener noreffer">oalieno</a></p>
+<p>$\Bbb{C} \hspace{1.1em}$ 複數</p>
+<p>$\Bbb{R} \hspace{1.1em}$ 實數</p>
+<p>$\Bbb{R}^{+} \hspace{0.5em}$ 正數</p>
+<p>$\Bbb{R}^{-} \hspace{0.5em}$ 負數</p>
+<p>$\Bbb{Q} \hspace{1.05em}$ 有理數</p>
+<p>$\Bbb{Z} \hspace{1.15em}$ 整數</p>
+<p>$\Bbb{Z}^{+} \hspace{0.5em}$ 正整數</p>
+<p>$\Bbb{Z}^{-} \hspace{0.5em}$ 負整數</p>
+<p>$\Bbb{N} \hspace{1.05em}$ 自然數 (包括正整數和 $0$)</p>
+<p>$\Bbb{I} \hspace{1.35em}$ 虛數</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -324,20 +175,20 @@ $$</p>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/rsa/" data-title="RSA" data-via="d3m094035901" data-hashtags="crypto,asymmetric,RSA"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/rsa/" data-hashtag="crypto"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/rsa/" data-title="RSA"><i class="fab fa-line fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/number/" data-title="Number" data-via="d3m094035901" data-hashtags="math"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/number/" data-hashtag="math"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/number/" data-title="Number"><i class="fab fa-line fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/asymmetric/">asymmetric</a>,&nbsp;<a href="/tags/rsa/">RSA</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/math/">math</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/hugo-on-github/" class="prev" rel="prev" title="Hugo on GitHub"><i class="fas fa-angle-left fa-fw"></i>Hugo on GitHub</a>
-            <a href="/posts/group-ring-field/" class="next" rel="next" title="Group-Ring-Field">Group-Ring-Field<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/group-ring-field/" class="prev" rel="prev" title="Group-Ring-Field"><i class="fas fa-angle-left fa-fw"></i>Group-Ring-Field</a>
+            <a href="/posts/dsa/" class="next" rel="next" title="DSA">DSA<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
