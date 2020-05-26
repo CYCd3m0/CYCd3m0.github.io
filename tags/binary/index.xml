@@ -9,7 +9,7 @@
     <pubDate>Tue, 26 May 2020 20:54:47 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://cycd3m0.github.io/posts/binary-complement/</guid>
-    <description><![CDATA[Ones&rsquo; complement 計算  對每個 bit 做 NOT 運算   Two&rsquo;s complement 計算  對每個 bit 做 NOT 運算，再加上 1   說明   對一個整數 $a$ (不論正負)，取補數會得到 $-a$ ，再取一次補數則會得到 $a$
+    <description><![CDATA[Ones&rsquo; complement 計算  對每個 bit 做 NOT 運算   Two&rsquo;s complement 計算  對每個 bit 做 NOT 運算，並在 LSB 加上 1   說明   對一個整數 $a$ (不論正負)，取補數會得到 $-a$ ，再取一次補數則會得到 $a$
   ones&rsquo; complement
   $\hspace{0.4em}$5 = 0101
   -5 = 1010
