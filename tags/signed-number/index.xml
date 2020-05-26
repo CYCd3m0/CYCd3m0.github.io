@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>signed number - Tag - d3m0&#39;s Blog</title>
+        <link>https://cycd3m0.github.io/tags/signed-number/</link>
+        <description>signed number - Tag - d3m0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 26 May 2020 20:54:47 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/signed-number/" rel="self" type="application/rss+xml" /><item>
+    <title>補數</title>
+    <link>https://cycd3m0.github.io/posts/binary-complement/</link>
+    <pubDate>Tue, 26 May 2020 20:54:47 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/binary-complement/</guid>
+    <description><![CDATA[Ones&rsquo; complement 計算  對每個 bit 做 NOT 運算   Two&rsquo;s complement 計算  對每個 bit 做 NOT 運算，再加上 1   說明   對一個整數 $a$ (不論正負)，取補數會得到 $-a$ ，再取一次補數則會得到 $a$
+  ones&rsquo; complement
+  $\hspace{0.4em}$5 = 0101
+  -5 = 1010
+    two&rsquo;s complement
+  -7 = 1001
+  $\hspace{0.4em}$7 = 0111
+    對一個以二進位表示的正整數 $a$ (MSB 為 0) ，可以直觀的看出 $a$ 的值，並透過取補數的方式，得到 $-a$ 的二進位表示法]]></description>
+</item></channel>
+</rss>

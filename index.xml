@@ -3,7 +3,21 @@
         <title>d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/</link>
         <description>d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 May 2020 06:34:53 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 26 May 2020 20:54:47 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>補數</title>
+    <link>https://cycd3m0.github.io/posts/binary-complement/</link>
+    <pubDate>Tue, 26 May 2020 20:54:47 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/binary-complement/</guid>
+    <description><![CDATA[Ones&rsquo; complement 計算  對每個 bit 做 NOT 運算   Two&rsquo;s complement 計算  對每個 bit 做 NOT 運算，再加上 1   說明   對一個整數 $a$ (不論正負)，取補數會得到 $-a$ ，再取一次補數則會得到 $a$
+  ones&rsquo; complement
+  $\hspace{0.4em}$5 = 0101
+  -5 = 1010
+    two&rsquo;s complement
+  -7 = 1001
+  $\hspace{0.4em}$7 = 0111
+    對一個以二進位表示的正整數 $a$ (MSB 為 0) ，可以直觀的看出 $a$ 的值，並透過取補數的方式，得到 $-a$ 的二進位表示法]]></description>
+</item><item>
     <title>ECC</title>
     <link>https://cycd3m0.github.io/posts/ecc/</link>
     <pubDate>Sun, 17 May 2020 06:34:53 &#43;0800</pubDate>
@@ -124,17 +138,5 @@ Basic   建立一個空的資料夾 (下面以 hugo-blog 為例)
   進到資料夾內，把要用的主題 clone 下來 (LoveIt) 1  git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt  
   建立新的文章 : hugo new posts/&lt;file_name&gt; (以 Hugo-on-GitHub.md 為例)  先完成下面的 Configuration 再新增文章 1  hugo new posts/Hugo-on-GitHub.md  
   Configuration   主要修改的是 config.]]></description>
-</item><item>
-    <title>Euler’s totient function</title>
-    <link>https://cycd3m0.github.io/posts/eulers-totient-function/</link>
-    <pubDate>Mon, 04 May 2020 02:14:13 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/posts/eulers-totient-function/</guid>
-    <description><![CDATA[Euler’s totient function $\phi(n)$ 代表 $1,2, \cdots ,n$ 中，跟 $n$ 互質的整數個數
-  如果 $p$ 是質數
-  $\phi(p) = p - 1$
-  $\phi(p^{k}) = p^{k} - p^{k-1}$
-    如果 $n = p \times q \times r$ ( $p , q , r$ 皆為質數)
- $\phi(n) = \phi(p) \times \phi(q) \times \phi(r)$     Example $ \phi(90) = \phi(2) \times \phi(3^{2}) \times \phi(5) \\ \hspace{2.]]></description>
 </item></channel>
 </rss>

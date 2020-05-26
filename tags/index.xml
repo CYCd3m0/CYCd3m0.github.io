@@ -3,7 +3,21 @@
         <title>Tags - Tag - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/tags/</link>
         <description>Tags - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 May 2020 06:34:53 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 26 May 2020 20:54:47 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>binary</title>
+    <link>https://cycd3m0.github.io/tags/binary/</link>
+    <pubDate>Tue, 26 May 2020 20:54:47 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/tags/binary/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>signed number</title>
+    <link>https://cycd3m0.github.io/tags/signed-number/</link>
+    <pubDate>Tue, 26 May 2020 20:54:47 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/tags/signed-number/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>asymmetric</title>
     <link>https://cycd3m0.github.io/tags/asymmetric/</link>
     <pubDate>Sun, 17 May 2020 06:34:53 &#43;0800</pubDate>
@@ -58,20 +72,6 @@
     <pubDate>Sat, 16 May 2020 22:02:22 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://cycd3m0.github.io/tags/math/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>RSA</title>
-    <link>https://cycd3m0.github.io/tags/rsa/</link>
-    <pubDate>Sat, 16 May 2020 10:20:01 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/tags/rsa/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>blog</title>
-    <link>https://cycd3m0.github.io/tags/blog/</link>
-    <pubDate>Thu, 07 May 2020 12:54:41 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/tags/blog/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

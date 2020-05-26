@@ -5,41 +5,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>ECC - d3m0&#39;s Blog</title>
-        <meta name="Description" content=""><meta property="og:title" content="ECC" />
-<meta property="og:description" content="Elliptic Curve $$ y^{2} = x^{3} &#43; ax &#43; b \\ \text{where} \hspace{1em} 4a^{3} &#43; 27b^{2} \not = 0 $$
-  單位元素 $0$ ，代表一個無窮遠的點
-  $P$ 的反元素 $-P$ ，代表 $P$ 對 $x$ 軸的鏡射
- $P &#43; (-P) = 0$     定義 $$ \lbrace (x,y) \isin \Bbb{R}^{2} \hspace{0.5em} | \hspace{0.5em} y^{2} = x^{3} &#43; ax &#43; b \hspace{0.5em} , \hspace{0.5em} 4a^{3} &#43; 27b^{2} \not = 0 \rbrace \cup \lbrace 0 \rbrace $$" />
+        <title>補數 - d3m0&#39;s Blog</title>
+        <meta name="Description" content=""><meta property="og:title" content="補數" />
+<meta property="og:description" content="Ones&rsquo; complement 計算  對每個 bit 做 NOT 運算   Two&rsquo;s complement 計算  對每個 bit 做 NOT 運算，再加上 1   說明   對一個整數 $a$ (不論正負)，取補數會得到 $-a$ ，再取一次補數則會得到 $a$
+  ones&rsquo; complement
+  $\hspace{0.4em}$5 = 0101
+  -5 = 1010
+    two&rsquo;s complement
+  -7 = 1001
+  $\hspace{0.4em}$7 = 0111
+    對一個以二進位表示的正整數 $a$ (MSB 為 0) ，可以直觀的看出 $a$ 的值，並透過取補數的方式，得到 $-a$ 的二進位表示法" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cycd3m0.github.io/posts/ecc/" />
-<meta property="article:published_time" content="2020-05-17T06:34:53+08:00" />
-<meta property="article:modified_time" content="2020-05-17T06:34:53+08:00" />
+<meta property="og:url" content="https://cycd3m0.github.io/posts/binary-complement/" />
+<meta property="article:published_time" content="2020-05-26T20:54:47+08:00" />
+<meta property="article:modified_time" content="2020-05-26T20:54:47+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ECC"/>
-<meta name="twitter:description" content="Elliptic Curve $$ y^{2} = x^{3} &#43; ax &#43; b \\ \text{where} \hspace{1em} 4a^{3} &#43; 27b^{2} \not = 0 $$
-  單位元素 $0$ ，代表一個無窮遠的點
-  $P$ 的反元素 $-P$ ，代表 $P$ 對 $x$ 軸的鏡射
- $P &#43; (-P) = 0$     定義 $$ \lbrace (x,y) \isin \Bbb{R}^{2} \hspace{0.5em} | \hspace{0.5em} y^{2} = x^{3} &#43; ax &#43; b \hspace{0.5em} , \hspace{0.5em} 4a^{3} &#43; 27b^{2} \not = 0 \rbrace \cup \lbrace 0 \rbrace $$"/>
+<meta name="twitter:title" content="補數"/>
+<meta name="twitter:description" content="Ones&rsquo; complement 計算  對每個 bit 做 NOT 運算   Two&rsquo;s complement 計算  對每個 bit 做 NOT 運算，再加上 1   說明   對一個整數 $a$ (不論正負)，取補數會得到 $-a$ ，再取一次補數則會得到 $a$
+  ones&rsquo; complement
+  $\hspace{0.4em}$5 = 0101
+  -5 = 1010
+    two&rsquo;s complement
+  -7 = 1001
+  $\hspace{0.4em}$7 = 0111
+    對一個以二進位表示的正整數 $a$ (MSB 為 0) ，可以直觀的看出 $a$ 的值，並透過取補數的方式，得到 $-a$ 的二進位表示法"/>
 <meta name="application-name" content="d3m0&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="d3m0&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/ecc/" /><link rel="prev" href="https://cycd3m0.github.io/posts/elgamal/" /><link rel="next" href="https://cycd3m0.github.io/posts/binary-complement/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/binary-complement/" /><link rel="prev" href="https://cycd3m0.github.io/posts/ecc/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "ECC",
+        "headline": "補數",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/cycd3m0.github.io\/posts\/ecc\/"
+            "@id": "https:\/\/cycd3m0.github.io\/posts\/binary-complement\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "crypto, asymmetric, ECC","wordcount":  431 ,
-        "url": "https:\/\/cycd3m0.github.io\/posts\/ecc\/","datePublished": "2020-05-17T06:34:53+08:00","dateModified": "2020-05-17T06:34:53+08:00","publisher": {
+            },"genre": "posts","keywords": "binary, signed number","wordcount":  77 ,
+        "url": "https:\/\/cycd3m0.github.io\/posts\/binary-complement\/","datePublished": "2020-05-26T20:54:47+08:00","dateModified": "2020-05-26T20:54:47+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -120,11 +128,11 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">ECC</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">補數</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-17>2020-05-17</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 431 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>3 min&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-26>2020-05-26</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 77 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -132,267 +140,121 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#elliptic-curve">Elliptic Curve</a>
+    <li><a href="#ones-complement">Ones&rsquo; complement</a>
       <ul>
-        <li><a href="#定義">定義</a></li>
-        <li><a href="#幾何加法">幾何加法</a></li>
-        <li><a href="#代數加法">代數加法</a></li>
-        <li><a href="#純量乘法">純量乘法</a></li>
+        <li><a href="#計算">計算</a></li>
       </ul>
     </li>
-    <li><a href="#elliptic-curve-cryptography">Elliptic Curve Cryptography</a>
+    <li><a href="#twos-complement">Two&rsquo;s complement</a>
       <ul>
-        <li><a href="#定義-elliptic-curves-in-bbbz_p">定義 Elliptic curves in $\Bbb{Z}_{p}$</a></li>
-        <li><a href="#代數加法-1">代數加法</a></li>
-        <li><a href="#order-of-an-elliptic-curve-group">Order of an elliptic curve group</a></li>
-        <li><a href="#subgroups">Subgroups</a></li>
+        <li><a href="#計算-1">計算</a></li>
+      </ul>
+    </li>
+    <li><a href="#說明">說明</a>
+      <ul>
+        <li><a href="#加法">加法</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="elliptic-curve">Elliptic Curve</h2>
-<p>$$
-y^{2} = x^{3} + ax + b \\
-\text{where} \hspace{1em} 4a^{3} + 27b^{2} \not = 0
-$$</p>
+            </div><div class="content" id="content"><h2 id="ones-complement">Ones&rsquo; complement</h2>
+<h3 id="計算">計算</h3>
 <ul>
-<li>
-<p>單位元素 $0$ ，代表一個無窮遠的點</p>
-</li>
-<li>
-<p>$P$ 的反元素 $-P$ ，代表 $P$ 對 $x$ 軸的鏡射</p>
-<ul>
-<li>$P + (-P) = 0$</li>
-</ul>
-</li>
+<li><strong>對每個 bit 做 NOT 運算</strong></li>
 </ul>
 <br/>
-<h3 id="定義">定義</h3>
-<p>$$
-\lbrace (x,y) \isin \Bbb{R}^{2} \hspace{0.5em} | \hspace{0.5em} y^{2} = x^{3} + ax + b \hspace{0.5em} , \hspace{0.5em} 4a^{3} + 27b^{2} \not = 0 \rbrace \cup \lbrace 0 \rbrace
-$$</p>
+<h2 id="twos-complement">Two&rsquo;s complement</h2>
+<h3 id="計算-1">計算</h3>
 <ul>
-<li>$(\Bbb{G},+)$ 是一個 Commutative Group</li>
+<li><strong>對每個 bit 做 NOT 運算，再加上 1</strong></li>
 </ul>
 <br/>
-<h3 id="幾何加法">幾何加法</h3>
-<p>$$
-P + Q = R \\
-P , Q\  \text{連線，在橢圓曲線上的交點對} x \text{軸的鏡射即為}\ R
-$$</p>
+<h2 id="說明">說明</h2>
 <ul>
 <li>
-<p>如果 $Q = 0$</p>
-<ul>
-<li>$P + 0 = P$</li>
-</ul>
-</li>
-<li>
-<p>如果 $Q = -P$</p>
-<ul>
-<li>$P + (-P) = 0$</li>
-</ul>
-</li>
-<li>
-<p>如果 $Q = P$</p>
-<ul>
-<li>$P + P = R$ ，橢圓曲線在 $P$ 點的切線與橢圓曲線的交點對 $x$ 軸的鏡射即為 $R$</li>
-</ul>
-</li>
-<li>
-<p>如果 $Q \not = P$ ，但 $P , Q$ 連線，在橢圓曲線上沒有交點</p>
+<p>對一個整數 $a$ (不論正負)，取補數會得到 $-a$ ，再取一次補數則會得到 $a$</p>
 <ul>
 <li>
-<p>如果切點為 $P$ ，則 $P + Q = -P$</p>
-</li>
-<li>
-<p>如果切點為 $Q$ ，則 $P + Q = -Q$</p>
-</li>
-</ul>
-</li>
-</ul>
-<br/>
-<h3 id="代數加法">代數加法</h3>
-<p>$$
-P = (x_{P},y_{P}) \hspace{2em} Q = (x_{Q},y_{Q}) \hspace{2em} R = (x_{R},y_{R})
-$$</p>
+<p>ones&rsquo; complement</p>
 <ul>
 <li>
-<p>如果 $P \not = Q$</p>
-<ul>
-<li>
-<p>斜率 $m = \dfrac{y_{P}-y_{Q}}{x_{P}-x_{Q}}$</p>
+<p>$\hspace{0.4em}$5 = 0101</p>
 </li>
 <li>
-<p>$x_{R} = m^{2} - x_{P} - x_{Q}$</p>
-</li>
-<li>
-<p>$y_{R} = m(x_{P}-x_{R}) - y_{P}$</p>
-</li>
-<li>
-<p><strong>即使 $P$ 或 $Q$ 其中一個是切點，也可以使用</strong></p>
+<p>-5 = 1010</p>
 </li>
 </ul>
 </li>
 <li>
-<p>如果 $P = Q$</p>
+<p>two&rsquo;s complement</p>
 <ul>
 <li>
-<p>斜率 $m = \dfrac{3x_{P}^{2}+a}{2y_{P}}$</p>
+<p>-7 = 1001</p>
 </li>
 <li>
-<p>$x_{R} = m^{2} - 2x_{P}$</p>
-</li>
-<li>
-<p>$y_{R} = m(x_{P}-x_{R}) - y_{P}$</p>
-</li>
-</ul>
-</li>
-</ul>
-<br/>
-<h3 id="純量乘法">純量乘法</h3>
-<p>$$
-nP = \underbrace{P + P + \cdots + P}_{n\ \text{times}}
-$$</p>
-<br/>
-<h2 id="elliptic-curve-cryptography">Elliptic Curve Cryptography</h2>
-<ul>
-<li>
-<p>The field of integers modulo $p$ 有以下表示方法</p>
-<ul>
-<li>
-<p>$\Bbb{Z}/p$</p>
-</li>
-<li>
-<p>$GF(p)$</p>
-</li>
-<li>
-<p>$\Bbb{F}_{p}$</p>
-</li>
-<li>
-<p>$\Bbb{Z}_{p}$</p>
+<p>$\hspace{0.4em}$7 = 0111</p>
 </li>
 </ul>
 </li>
 <li>
-<p>$x/y\ $ in $\ \Bbb{Z}_{p}$</p>
-<ul>
-<li>
-<p>$x/y = x \times y_{inv}$</p>
+<p>對一個以二進位表示的正整數 $a$ (MSB 為 0) ，可以直觀的看出 $a$ 的值，並透過取補數的方式，得到 $-a$ 的二進位表示法</p>
 </li>
 <li>
-<p>$x$ 乘上 $y$ 的乘法反元素</p>
+<p>對一個以二進位表示的負整數 $-a$ (MSB 為 1) ，難以直觀的看出 $-a$ 的值，我們取補數後得到正整數 $a$ 的二進位表示法，即可看出 $a$ 和 $-a$ 的值</p>
 </li>
 </ul>
 </li>
 </ul>
-<br/>
-<h3 id="定義-elliptic-curves-in-bbbz_p">定義 Elliptic curves in $\Bbb{Z}_{p}$</h3>
-<br/>
-<p>$$
-\lbrace (x,y) \isin (\Bbb{Z}_{p})^{2} \hspace{0.5em} | \hspace{0.5em} y^{2} \equiv x^{3} + ax + b\ (\bmod\ p) \hspace{0.5em} , \hspace{0.5em} 4a^{3} + 27b^{2} \not \equiv 0\ (\bmod\ p) \rbrace \cup \lbrace 0 \rbrace
-$$</p>
-<br/>
-<p>Elliptic curves in $\Bbb{Z}_{p}$ <strong>依然是 Commutative Group</strong></p>
-<br/>
-<h3 id="代數加法-1">代數加法</h3>
-<p>$$
-P = (x_{P},y_{P}) \hspace{2em} Q = (x_{Q},y_{Q}) \hspace{2em} R = (x_{R},y_{R})
-$$</p>
+<h3 id="加法">加法</h3>
 <ul>
 <li>
-<p>如果 $P \not = Q$</p>
+<p>如果最高位沒有進位，則結果即為答案</p>
+</li>
+<li>
+<p><strong>如果最高位有進位</strong></p>
 <ul>
 <li>
-<p>斜率 $m = (y_{P}-y_{Q})(x_{P}-x_{Q})_{inv} \bmod p$</p>
-</li>
-<li>
-<p>$x_{R} = (m^{2} - x_{P} - x_{Q}) \bmod p$</p>
-</li>
-<li>
-<p>$y_{R} = \lbrack m(x_{P}-x_{R}) - y_{P} \rbrack \bmod p$</p>
-</li>
+<p>ones&rsquo; complement</p>
+<ul>
+<li>把 1 加到 LSB</li>
 </ul>
 </li>
 <li>
-<p>如果 $P = Q$</p>
+<p>two&rsquo;s complement</p>
 <ul>
-<li>
-<p>斜率 $m = (3x_{P}^{2}+a)(2y_{P})_{inv} \bmod p$</p>
-</li>
-<li>
-<p>$x_{R} = (m^{2} - 2x_{P}) \bmod p$</p>
-</li>
-<li>
-<p>$y_{R} = \lbrack m(x_{P}-x_{R}) - y_{P} \rbrack \bmod p$</p>
-</li>
-</ul>
-</li>
-</ul>
-<br/>
-<p><strong>其實跟 $\Bbb{R}^{2}$ 的算法完全一樣，只是多了 $(\bmod\ p)$</strong></p>
-<br/>
-<h3 id="order-of-an-elliptic-curve-group">Order of an elliptic curve group</h3>
-<ul>
-<li>Elliptic curve group 中，點的數量就代表 group 的 order</li>
-</ul>
-<br/>
-<h3 id="subgroups">Subgroups</h3>
-<ul>
-<li>
-<p>Subgroup</p>
-<ul>
-<li>
-<p>subgroup 中，點的數量依然代表 subgroup 的 order</p>
-</li>
-<li>
-<p>cyclic subgroup 中，$P$ 的 order ，是使 $nP = 0$ 的最小正整數 $n$</p>
-</li>
-<li>
-<p><strong>group 的 order 必為其 subgroup order 的整數倍</strong></p>
-</li>
-<li>
-<p>ECC 中，我們需要一個 order 很大的 subgroup</p>
-<ul>
-<li>
-<p>並不是先選擇 base point (generator) 再計算 order</p>
-</li>
-<li>
-<p>先計算 group 的 order $(N)$ ，再選擇足夠大的 subgroup order $(n)$</p>
-<ul>
-<li>$NP = 0$ ，因為 $N$ 是 $n$ 的整數倍</li>
+<li>進位直接捨棄</li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
+<li>
+<p>如果正數加正數得到負數，或是負數加負數得到正數，則代表發生溢位</p>
 </li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-05-17</span>
+                <span>The article was updated on 2020-05-26</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/ecc/" data-title="ECC" data-via="d3m094035901" data-hashtags="crypto,asymmetric,ECC"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/ecc/" data-hashtag="crypto"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/ecc/" data-title="ECC"><i class="fab fa-line fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/binary-complement/" data-title="補數" data-via="d3m094035901" data-hashtags="binary,signed number"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/binary-complement/" data-hashtag="binary"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/binary-complement/" data-title="補數"><i class="fab fa-line fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/asymmetric/">asymmetric</a>,&nbsp;<a href="/tags/ecc/">ECC</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/binary/">binary</a>,&nbsp;<a href="/tags/signed-number/">signed number</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/elgamal/" class="prev" rel="prev" title="ElGamal"><i class="fas fa-angle-left fa-fw"></i>ElGamal</a>
-            <a href="/posts/binary-complement/" class="next" rel="next" title="補數">補數<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/ecc/" class="prev" rel="prev" title="ECC"><i class="fas fa-angle-left fa-fw"></i>ECC</a></div>
 </div>
 </article></div>
             </main><footer class="footer">
