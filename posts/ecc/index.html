@@ -38,7 +38,7 @@
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "crypto, asymmetric, ECC","wordcount":  431 ,
+            },"genre": "posts","keywords": "crypto, asymmetric, ECC","wordcount":  430 ,
         "url": "https:\/\/cycd3m0.github.io\/posts\/ecc\/","datePublished": "2020-05-17T06:34:53+08:00","dateModified": "2020-05-17T06:34:53+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
@@ -123,7 +123,7 @@
         </div><article class="page single"><h1 class="single-title animated flipInX">ECC</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-17>2020-05-17</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 431 words&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 430 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>3 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
@@ -142,7 +142,7 @@
     </li>
     <li><a href="#elliptic-curve-cryptography">Elliptic Curve Cryptography</a>
       <ul>
-        <li><a href="#定義-elliptic-curves-in-bbbz_p">定義 Elliptic curves in $\Bbb{Z}_{p}$</a></li>
+        <li><a href="#定義-elliptic-curves-in-bbbf_p">定義 Elliptic curves in $\Bbb{F}_{p}$</a></li>
         <li><a href="#代數加法-1">代數加法</a></li>
         <li><a href="#order-of-an-elliptic-curve-group">Order of an elliptic curve group</a></li>
         <li><a href="#subgroups">Subgroups</a></li>
@@ -234,6 +234,9 @@ $$</p>
 </li>
 </ul>
 </li>
+</ul>
+<br/>
+<ul>
 <li>
 <p>如果 $P = Q$</p>
 <ul>
@@ -269,13 +272,13 @@ $$</p>
 <li>
 <p>$\Bbb{F}_{p}$</p>
 </li>
-<li>
-<p>$\Bbb{Z}_{p}$</p>
-</li>
 </ul>
 </li>
+</ul>
+<br/>
+<ul>
 <li>
-<p>$x/y\ $ in $\ \Bbb{Z}_{p}$</p>
+<p>$x/y\ $ in $\ \Bbb{F}_{p}$</p>
 <ul>
 <li>
 <p>$x/y = x \times y_{inv}$</p>
@@ -287,13 +290,13 @@ $$</p>
 </li>
 </ul>
 <br/>
-<h3 id="定義-elliptic-curves-in-bbbz_p">定義 Elliptic curves in $\Bbb{Z}_{p}$</h3>
+<h3 id="定義-elliptic-curves-in-bbbf_p">定義 Elliptic curves in $\Bbb{F}_{p}$</h3>
 <br/>
 <p>$$
-\lbrace (x,y) \isin (\Bbb{Z}_{p})^{2} \hspace{0.5em} | \hspace{0.5em} y^{2} \equiv x^{3} + ax + b\ (\bmod\ p) \hspace{0.5em} , \hspace{0.5em} 4a^{3} + 27b^{2} \not \equiv 0\ (\bmod\ p) \rbrace \cup \lbrace 0 \rbrace
+\lbrace (x,y) \isin (\Bbb{F}_{p})^{2} \hspace{0.5em} | \hspace{0.5em} y^{2} \equiv x^{3} + ax + b\ (\bmod\ p) \hspace{0.5em} , \hspace{0.5em} 4a^{3} + 27b^{2} \not \equiv 0\ (\bmod\ p) \rbrace \cup \lbrace 0 \rbrace
 $$</p>
 <br/>
-<p>Elliptic curves in $\Bbb{Z}_{p}$ <strong>依然是 Commutative Group</strong></p>
+<p>Elliptic curves in $\Bbb{F}_{p}$ <strong>依然是 Commutative Group</strong></p>
 <br/>
 <h3 id="代數加法-1">代數加法</h3>
 <p>$$
@@ -314,6 +317,9 @@ $$</p>
 </li>
 </ul>
 </li>
+</ul>
+<br/>
+<ul>
 <li>
 <p>如果 $P = Q$</p>
 <ul>
