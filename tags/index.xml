@@ -3,7 +3,21 @@
         <title>Tags - Tag - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/tags/</link>
         <description>Tags - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 26 May 2020 20:54:47 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 13 Jun 2020 01:33:29 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>installation</title>
+    <link>https://cycd3m0.github.io/tags/installation/</link>
+    <pubDate>Sat, 13 Jun 2020 01:33:29 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/tags/installation/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>sage</title>
+    <link>https://cycd3m0.github.io/tags/sage/</link>
+    <pubDate>Sat, 13 Jun 2020 01:33:29 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/tags/sage/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>binary</title>
     <link>https://cycd3m0.github.io/tags/binary/</link>
     <pubDate>Tue, 26 May 2020 20:54:47 &#43;0800</pubDate>
@@ -58,20 +72,6 @@
     <pubDate>Sun, 17 May 2020 03:36:30 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://cycd3m0.github.io/tags/lea/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>DSA</title>
-    <link>https://cycd3m0.github.io/tags/dsa/</link>
-    <pubDate>Sun, 17 May 2020 02:44:35 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/tags/dsa/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>math</title>
-    <link>https://cycd3m0.github.io/tags/math/</link>
-    <pubDate>Sat, 16 May 2020 22:02:22 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/tags/math/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

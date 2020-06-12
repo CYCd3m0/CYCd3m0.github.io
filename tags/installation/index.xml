@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>installation - Tag - d3m0&#39;s Blog</title>
+        <link>https://cycd3m0.github.io/tags/installation/</link>
+        <description>installation - Tag - d3m0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 13 Jun 2020 01:33:29 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/installation/" rel="self" type="application/rss+xml" /><item>
+    <title>SageMath Installation</title>
+    <link>https://cycd3m0.github.io/posts/sagemath-installation/</link>
+    <pubDate>Sat, 13 Jun 2020 01:33:29 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/sagemath-installation/</guid>
+    <description><![CDATA[SageMath 9.1 on OSX SageMath 從 9.0 版，開始用 python3
+重裝的同時，紀錄下過程
+ SageMath   從官網下載 SageMath 9.1
+ 我是下載這裡的 sage-9.1-OSX_10.11.6-x86_64.app.dmg    下載完就點開，把檔案丟進 /Applications
+  最後加個捷徑 1  sudo ln -s /Applications/SageMath-9.1.app/sage /usr/local/bin/sage  
+   完成就能直接執行 sage 檔，或使用 sage shell
+1  sage &lt;SageFile&gt;    SageMath with Python   如果要在 sage 裡寫 python
+  就在 python 的檔案加上 1  from sage.all import *]]></description>
+</item></channel>
+</rss>
