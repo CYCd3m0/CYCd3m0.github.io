@@ -3,7 +3,22 @@
         <title>d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/</link>
         <description>d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 13 Jun 2020 01:33:29 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>NTRUEncrypt</title>
+    <link>https://cycd3m0.github.io/posts/ntruencrypt/</link>
+    <pubDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/ntruencrypt/</guid>
+    <description><![CDATA[NTRUEncrypt   NTRU 的運算，基於 truncated polynomial ring $\Bbb{R}$
+ $\Bbb{R} = \Bbb{Z} \lbrack X \rbrack / (X^{N}-1)$ example  $\Bbb{Z}_{13} \lbrack X \rbrack / (X^{4}+1)$
+是將多項式的係數，都對 13 取餘數
+並將多項式對 $X^{4}+1$ 取餘數
+       Key generation   先寫結論
+  公鑰為 $(N , p , q , h)$
+  私鑰為 $(f , g , f_{p})$
+    Bob 選擇一個質數 $N$
+  Bob 選擇兩個互質的整數 $p , q$]]></description>
+</item><item>
     <title>SageMath Installation</title>
     <link>https://cycd3m0.github.io/posts/sagemath-installation/</link>
     <pubDate>Sat, 13 Jun 2020 01:33:29 &#43;0800</pubDate>
@@ -127,18 +142,5 @@ $\Bbb{I} \hspace{1.35em}$ 虛數]]></description>
   只要 operand 的位置不變，則運算順序不會造成影響 (即置換括號不會改變結果)
   $(a \times b) \times c = a \times (b \times c) \hspace{1em},\hspace{1em} \forall\ a,b,c \isin G$
     Identity (存在單位元素)]]></description>
-</item><item>
-    <title>RSA</title>
-    <link>https://cycd3m0.github.io/posts/rsa/</link>
-    <pubDate>Sat, 16 May 2020 10:20:01 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/posts/rsa/</guid>
-    <description><![CDATA[RSA Parameters $$ n = p \times q $$
-$$ \phi(n) = (p-1) \times (q-1) $$
-$$ \gcd (e ,\ \phi (n)) = 1 $$
-$$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$
-Note  選擇的 $e$ 必須與 $\phi (n)$ 互質   Encryption $$ M^{e} \equiv C \ (\bmod \ n) $$
-Decryption $$ C^{d} \equiv M \ (\bmod \ n) $$
-Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$]]></description>
 </item></channel>
 </rss>

@@ -11,7 +11,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cycd3m0.github.io/" />
-<meta property="og:updated_time" content="2020-06-13T01:33:29+08:00" />
+<meta property="og:updated_time" content="2020-06-26T19:44:07+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="d3m0&#39;s Blog"/>
 <meta name="twitter:description" content=""/>
@@ -101,7 +101,21 @@
         data-sizes="auto"
         alt="Home"
         title="Home" /></a>
-        </div><h2 class="home-subtitle"><div id="id-bbce61" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/CYCd3m0" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://twitter.com/d3m094035901" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://facebook.com/100022808748471" title="facebook" target="_blank" rel="noopener noreffer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/CYCd3m0" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:eugene5241@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+        </div><h2 class="home-subtitle"><div id="id-f74551" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/CYCd3m0" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://twitter.com/d3m094035901" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://facebook.com/100022808748471" title="facebook" target="_blank" rel="noopener noreffer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/CYCd3m0" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:eugene5241@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/hashpump-usage/">Hashpump Usage</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
+            published on&nbsp;<time datetime=2020-05-17>2020-05-17</time>
+        </span></div><div class="content">條件   已知 hash(secert || message) (hash值)
+  已知 secert 長度， message 內容，未知 secret 內容
+  可利用 hashpump 來算出 hash(secret || message || padding || XXXXX)
+ padding 做長度擴充， XXXXX 可填任意字串    用法   Input Signature : $\hspace{2em}$ 填入 hash(secert || message)
+  Input Data : $\hspace{3.8em}$ 填入 message
+  Input Key Length : $\hspace{1.4em}$ 填入 secert 長度
+  Input Data to Add : $\hspace{1.</div><div class="post-footer">
+        <a href="/posts/hashpump-usage/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/hashpump/">hashpump</a>,&nbsp;<a href="/tags/lea/">LEA</a></div></div>
+</article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/dsa/">DSA</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
@@ -178,19 +192,6 @@ Basic   建立一個空的資料夾 (下面以 hugo-blog 為例)
         <a href="/posts/hugo-on-github/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/github/">GitHub</a>,&nbsp;<a href="/tags/blog/">blog</a>,&nbsp;<a href="/tags/website/">website</a></div></div>
 </article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/eulers-totient-function/">Euler’s totient function</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
-            published on&nbsp;<time datetime=2020-05-04>2020-05-04</time>
-        </span></div><div class="content">Euler’s totient function $\phi(n)$ 代表 $1,2, \cdots ,n$ 中，跟 $n$ 互質的整數個數
-  如果 $p$ 是質數
-  $\phi(p) = p - 1$
-  $\phi(p^{k}) = p^{k} - p^{k-1}$
-    如果 $n = p \times q \times r$ ( $p , q , r$ 皆為質數)
- $\phi(n) = \phi(p) \times \phi(q) \times \phi(r)$     Example $ \phi(90) = \phi(2) \times \phi(3^{2}) \times \phi(5) \\ \hspace{2.</div><div class="post-footer">
-        <a href="/posts/eulers-totient-function/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/math/">math</a>,&nbsp;<a href="/tags/euler/">Euler</a></div></div>
-</article>
 <ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -216,6 +217,6 @@ Basic   建立一個空的資料夾 (下面以 hugo-blog 為例)
                 <i class="fas fa-comment fa-fw"></i>
             </a>
         </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-bbce61":"I'm d3m0 , a beginner in CTF"},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"SW52LR4DGP","algoliaIndex":"d3m0_blog","algoliaSearchKey":"b6f298fb0223168453cc898f455f49e2","noResultsFound":"No results found","type":"algolia"},"typeit":[["id-bbce61"]]};
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-f74551":"I'm d3m0 , a beginner in CTF"},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"SW52LR4DGP","algoliaIndex":"d3m0_blog","algoliaSearchKey":"b6f298fb0223168453cc898f455f49e2","noResultsFound":"No results found","type":"algolia"},"typeit":[["id-f74551"]]};
 </script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

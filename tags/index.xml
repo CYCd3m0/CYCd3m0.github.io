@@ -3,7 +3,28 @@
         <title>Tags - Tag - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/tags/</link>
         <description>Tags - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 13 Jun 2020 01:33:29 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>crypto</title>
+    <link>https://cycd3m0.github.io/tags/crypto/</link>
+    <pubDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/tags/crypto/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>lattice-based</title>
+    <link>https://cycd3m0.github.io/tags/lattice-based/</link>
+    <pubDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/tags/lattice-based/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>post-quantum</title>
+    <link>https://cycd3m0.github.io/tags/post-quantum/</link>
+    <pubDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/tags/post-quantum/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>installation</title>
     <link>https://cycd3m0.github.io/tags/installation/</link>
     <pubDate>Sat, 13 Jun 2020 01:33:29 &#43;0800</pubDate>
@@ -39,13 +60,6 @@
     <guid>https://cycd3m0.github.io/tags/asymmetric/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>crypto</title>
-    <link>https://cycd3m0.github.io/tags/crypto/</link>
-    <pubDate>Sun, 17 May 2020 06:34:53 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/tags/crypto/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
     <title>ECC</title>
     <link>https://cycd3m0.github.io/tags/ecc/</link>
     <pubDate>Sun, 17 May 2020 06:34:53 &#43;0800</pubDate>
@@ -58,20 +72,6 @@
     <pubDate>Sun, 17 May 2020 03:54:38 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://cycd3m0.github.io/tags/d-h/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>hashpump</title>
-    <link>https://cycd3m0.github.io/tags/hashpump/</link>
-    <pubDate>Sun, 17 May 2020 03:36:30 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/tags/hashpump/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>LEA</title>
-    <link>https://cycd3m0.github.io/tags/lea/</link>
-    <pubDate>Sun, 17 May 2020 03:36:30 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/tags/lea/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
