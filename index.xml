@@ -3,7 +3,24 @@
         <title>d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/</link>
         <description>d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 02 Jul 2020 12:17:21 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>Division</title>
+    <link>https://cycd3m0.github.io/posts/division/</link>
+    <pubDate>Thu, 02 Jul 2020 12:17:21 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/division/</guid>
+    <description><![CDATA[Division 一篇關於除法的廢文
+但我每次都忘記，所以還是寫下來
+   $a$ 除以 $b$
+  $a \div b$
+  $a$ divided by $b$
+  divide $a$ by $b$
+    $a$ 除 $b$
+ $b \div a$       $a \div b = c &hellip; r$
+  $a$ : 被除數 ， dividend
+  $b$ : 除數 $\hspace{0.7em}$ ， divisor
+  $c$ : 商 $\hspace{1.]]></description>
+</item><item>
     <title>NTRUEncrypt</title>
     <link>https://cycd3m0.github.io/posts/ntruencrypt/</link>
     <pubDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</pubDate>
@@ -127,20 +144,5 @@ $\Bbb{Z}^{+} \hspace{0.5em}$ 正整數
 $\Bbb{Z}^{-} \hspace{0.5em}$ 負整數
 $\Bbb{N} \hspace{1.05em}$ 自然數 (包括正整數和 $0$)
 $\Bbb{I} \hspace{1.35em}$ 虛數]]></description>
-</item><item>
-    <title>Group-Ring-Field</title>
-    <link>https://cycd3m0.github.io/posts/group-ring-field/</link>
-    <pubDate>Sat, 16 May 2020 20:01:15 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/posts/group-ring-field/</guid>
-    <description><![CDATA[Group 一個集合 $G$ 上的運算 $\times$ 滿足「Closure、Associativity、Identity、Inverse」四個性質
-我們稱 $(G,\times)$ 是一個 Group
-  Closure (封閉性)
-  對於集合 $G$ 當中的任意元素 $a$ 和 $b$ ，經過 $\times$ 運算的結果，必定也是集合 $G$ 的元素
-  $a \times b \isin G \hspace{1em},\hspace{1em} \forall\ a,b \isin G$
-    Associativity (結合律)
-  只要 operand 的位置不變，則運算順序不會造成影響 (即置換括號不會改變結果)
-  $(a \times b) \times c = a \times (b \times c) \hspace{1em},\hspace{1em} \forall\ a,b,c \isin G$
-    Identity (存在單位元素)]]></description>
 </item></channel>
 </rss>

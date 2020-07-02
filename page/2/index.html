@@ -11,7 +11,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cycd3m0.github.io/" />
-<meta property="og:updated_time" content="2020-06-26T19:44:07+08:00" />
+<meta property="og:updated_time" content="2020-07-02T12:17:21+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="d3m0&#39;s Blog"/>
 <meta name="twitter:description" content=""/>
@@ -101,7 +101,22 @@
         data-sizes="auto"
         alt="Home"
         title="Home" /></a>
-        </div><h2 class="home-subtitle"><div id="id-f74551" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/CYCd3m0" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://twitter.com/d3m094035901" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://facebook.com/100022808748471" title="facebook" target="_blank" rel="noopener noreffer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/CYCd3m0" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:eugene5241@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+        </div><h2 class="home-subtitle"><div id="id-f0d0f8" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/CYCd3m0" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://twitter.com/d3m094035901" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://facebook.com/100022808748471" title="facebook" target="_blank" rel="noopener noreffer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/CYCd3m0" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:eugene5241@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/diffie-hellman/">Diffie Hellman</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
+            published on&nbsp;<time datetime=2020-05-17>2020-05-17</time>
+        </span></div><div class="content">Diffie-Hellman key exchange   選擇一個質數 $p$ ，和一個整數 $g$
+ $(p,g)$ 是公開的資訊    Alice 隨機選擇一個整數 $a$ 作為私鑰，並計算 $A = g^{a} \bmod p$ 傳送給 Bob
+  $a$ 是 Alice 的私鑰
+  $A$ 是可公開的資訊
+    Bob 隨機選擇一個整數 $b$ 作為私鑰，並計算 $B = g^{b} \bmod p$ 傳送給 Alice
+  $b$ 是 Bob 的私鑰
+  $B$ 是可公開的資訊
+    Alice 計算 $s = B^{a} \bmod p$</div><div class="post-footer">
+        <a href="/posts/diffie-hellman/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/asymmetric/">asymmetric</a>,&nbsp;<a href="/tags/d-h/">D-H</a></div></div>
+</article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/hashpump-usage/">Hashpump Usage</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
@@ -179,19 +194,6 @@ Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$</div><div class="post-
         <a href="/posts/rsa/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/asymmetric/">asymmetric</a>,&nbsp;<a href="/tags/rsa/">RSA</a></div></div>
 </article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/hugo-on-github/">Hugo on GitHub</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
-            published on&nbsp;<time datetime=2020-05-07>2020-05-07</time>
-        </span></div><div class="content">Hugo with LoveIt 為了避免自己忘記，先記錄下關於建立這個 blog 的過程
-Basic   建立一個空的資料夾 (下面以 hugo-blog 為例)
-  建立網站 : hugo new site &lt;dir_name&gt; 1  hugo new site hugo-blog  
-  進到資料夾內，把要用的主題 clone 下來 (LoveIt) 1  git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt  
-  建立新的文章 : hugo new posts/&lt;file_name&gt; (以 Hugo-on-GitHub.md 為例)  先完成下面的 Configuration 再新增文章 1  hugo new posts/Hugo-on-GitHub.md  
-  Configuration   主要修改的是 config.</div><div class="post-footer">
-        <a href="/posts/hugo-on-github/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/github/">GitHub</a>,&nbsp;<a href="/tags/blog/">blog</a>,&nbsp;<a href="/tags/website/">website</a></div></div>
-</article>
 <ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -217,6 +219,6 @@ Basic   建立一個空的資料夾 (下面以 hugo-blog 為例)
                 <i class="fas fa-comment fa-fw"></i>
             </a>
         </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-f74551":"I'm d3m0 , a beginner in CTF"},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"SW52LR4DGP","algoliaIndex":"d3m0_blog","algoliaSearchKey":"b6f298fb0223168453cc898f455f49e2","noResultsFound":"No results found","type":"algolia"},"typeit":[["id-f74551"]]};
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-f0d0f8":"I'm d3m0 , a beginner in CTF"},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"SW52LR4DGP","algoliaIndex":"d3m0_blog","algoliaSearchKey":"b6f298fb0223168453cc898f455f49e2","noResultsFound":"No results found","type":"algolia"},"typeit":[["id-f0d0f8"]]};
 </script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

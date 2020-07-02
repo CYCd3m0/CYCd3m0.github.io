@@ -5,51 +5,55 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>NTRUEncrypt - d3m0&#39;s Blog</title>
-        <meta name="Description" content=""><meta property="og:title" content="NTRUEncrypt" />
-<meta property="og:description" content="NTRUEncrypt   NTRU 的運算，基於 truncated polynomial ring $\Bbb{R}$
- $\Bbb{R} = \Bbb{Z} \lbrack X \rbrack / (X^{N}-1)$ example  $\Bbb{Z}_{13} \lbrack X \rbrack / (X^{4}&#43;1)$
-是將多項式的係數，都對 13 取餘數
-並將多項式對 $X^{4}&#43;1$ 取餘數
-       Key generation   先寫結論
-  公鑰為 $(N , p , q , h)$
-  私鑰為 $(f , g , f_{p})$
-    Bob 選擇一個質數 $N$
-  Bob 選擇兩個互質的整數 $p , q$" />
+        <title>Division - d3m0&#39;s Blog</title>
+        <meta name="Description" content=""><meta property="og:title" content="Division" />
+<meta property="og:description" content="Division 一篇關於除法的廢文
+但我每次都忘記，所以還是寫下來
+   $a$ 除以 $b$
+  $a \div b$
+  $a$ divided by $b$
+  divide $a$ by $b$
+    $a$ 除 $b$
+ $b \div a$       $a \div b = c &hellip; r$
+  $a$ : 被除數 ， dividend
+  $b$ : 除數 $\hspace{0.7em}$ ， divisor
+  $c$ : 商 $\hspace{1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cycd3m0.github.io/posts/ntruencrypt/" />
-<meta property="article:published_time" content="2020-06-26T19:44:07+08:00" />
-<meta property="article:modified_time" content="2020-06-26T19:44:07+08:00" />
+<meta property="og:url" content="https://cycd3m0.github.io/posts/division/" />
+<meta property="article:published_time" content="2020-07-02T12:17:21+08:00" />
+<meta property="article:modified_time" content="2020-07-02T12:17:21+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="NTRUEncrypt"/>
-<meta name="twitter:description" content="NTRUEncrypt   NTRU 的運算，基於 truncated polynomial ring $\Bbb{R}$
- $\Bbb{R} = \Bbb{Z} \lbrack X \rbrack / (X^{N}-1)$ example  $\Bbb{Z}_{13} \lbrack X \rbrack / (X^{4}&#43;1)$
-是將多項式的係數，都對 13 取餘數
-並將多項式對 $X^{4}&#43;1$ 取餘數
-       Key generation   先寫結論
-  公鑰為 $(N , p , q , h)$
-  私鑰為 $(f , g , f_{p})$
-    Bob 選擇一個質數 $N$
-  Bob 選擇兩個互質的整數 $p , q$"/>
+<meta name="twitter:title" content="Division"/>
+<meta name="twitter:description" content="Division 一篇關於除法的廢文
+但我每次都忘記，所以還是寫下來
+   $a$ 除以 $b$
+  $a \div b$
+  $a$ divided by $b$
+  divide $a$ by $b$
+    $a$ 除 $b$
+ $b \div a$       $a \div b = c &hellip; r$
+  $a$ : 被除數 ， dividend
+  $b$ : 除數 $\hspace{0.7em}$ ， divisor
+  $c$ : 商 $\hspace{1."/>
 <meta name="application-name" content="d3m0&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="d3m0&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/ntruencrypt/" /><link rel="prev" href="https://cycd3m0.github.io/posts/sagemath-installation/" /><link rel="next" href="https://cycd3m0.github.io/posts/division/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/division/" /><link rel="prev" href="https://cycd3m0.github.io/posts/ntruencrypt/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "NTRUEncrypt",
+        "headline": "Division",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/cycd3m0.github.io\/posts\/ntruencrypt\/"
+            "@id": "https:\/\/cycd3m0.github.io\/posts\/division\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "crypto, lattice-based, post-quantum","wordcount":  182 ,
-        "url": "https:\/\/cycd3m0.github.io\/posts\/ntruencrypt\/","datePublished": "2020-06-26T19:44:07+08:00","dateModified": "2020-06-26T19:44:07+08:00","publisher": {
+            },"genre": "posts","keywords": "math","wordcount":  80 ,
+        "url": "https:\/\/cycd3m0.github.io\/posts\/division\/","datePublished": "2020-07-02T12:17:21+08:00","dateModified": "2020-07-02T12:17:21+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -130,10 +134,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">NTRUEncrypt</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Division</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-06-26>2020-06-26</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 182 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-07-02>2020-07-02</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 80 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
@@ -142,138 +146,111 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#ntruencrypt">NTRUEncrypt</a></li>
-    <li><a href="#key-generation">Key generation</a></li>
-    <li><a href="#encryption">Encryption</a></li>
-    <li><a href="#decryption">Decryption</a></li>
+    <li><a href="#division">Division</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="ntruencrypt">NTRUEncrypt</h2>
+            </div><div class="content" id="content"><h2 id="division">Division</h2>
+<p>一篇關於除法的廢文</p>
+<p><del>但我每次都忘記，所以還是寫下來</del></p>
+<br/>
 <ul>
 <li>
-<p>NTRU 的運算，基於 truncated polynomial ring $\Bbb{R}$</p>
+<p>$a$ 除以 $b$</p>
 <ul>
-<li>$\Bbb{R} = \Bbb{Z} \lbrack X \rbrack / (X^{N}-1)$
-<div class="details admonition note open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw"></i>example<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content"><p>$\Bbb{Z}_{13} \lbrack X \rbrack / (X^{4}+1)$</p>
-<p>是將多項式的係數，都對 13 取餘數</p>
-<p>並將多項式對 $X^{4}+1$ 取餘數</p>
-</div>
-        </div>
-    </div></li>
+<li>
+<p>$a \div b$</p>
+</li>
+<li>
+<p>$a$ divided by $b$</p>
+</li>
+<li>
+<p>divide $a$ by $b$</p>
+</li>
+</ul>
+</li>
+<li>
+<p>$a$ 除 $b$</p>
+<ul>
+<li>$b \div a$</li>
 </ul>
 </li>
 </ul>
 <br/>
-<h2 id="key-generation">Key generation</h2>
 <ul>
 <li>
-<p>先寫結論</p>
+<p>$a \div b = c &hellip; r$</p>
 <ul>
 <li>
-<p>公鑰為 $(N , p , q , h)$</p>
+<p>$a$ : 被除數 ， dividend</p>
 </li>
 <li>
-<p>私鑰為 $(f , g , f_{p})$</p>
+<p>$b$ : 除數 $\hspace{0.7em}$  ， divisor</p>
+</li>
+<li>
+<p>$c$ : 商 $\hspace{1.5em}$ ， quotient</p>
+</li>
+<li>
+<p>$r$ : 餘數 $\hspace{0.7em}$ ， remainder</p>
 </li>
 </ul>
-</li>
-<li>
-<p>Bob 選擇一個質數 $N$</p>
-</li>
-<li>
-<p>Bob 選擇兩個互質的整數 $p , q$</p>
-<ul>
-<li>$q &gt; p$</li>
-</ul>
-</li>
-<li>
-<p><strong>所有選擇的多項式 degree 最高為 $N-1$ ，且係數只能是 $\lbrace -1 , 0 , 1 \rbrace$ 其中一個</strong></p>
-<ul>
-<li>$c , m$ 也要先轉成 binary ，再化為多項式</li>
-</ul>
-</li>
-<li>
-<p>Bob 隨機選擇兩個多項式 $f , g$</p>
-<ul>
-<li>
-<p>$f$ 必須有對 $p , q$ 的模反元素，如下，否則重新選擇一個 $f$</p>
-<ul>
-<li>
-<p>$f \cdot f_{p} = 1 \ (\bmod \ p)$</p>
-</li>
-<li>
-<p>$f \cdot f_{q} = 1 \ (\bmod \ q)$</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>$h = pf_{q} \cdot g \ (\bmod \ q)$</p>
 </li>
 </ul>
 <br/>
-<h2 id="encryption">Encryption</h2>
 <ul>
 <li>
-<p>Alice 傳送 m 給 Bob 前，先隨機選擇一個多項式 $r$</p>
+<p>$a \mid b$</p>
 <ul>
-<li>$r$ 稱為 Blinding Value</li>
+<li>
+<p>$a$ 整除 $b$</p>
+</li>
+<li>
+<p>$b$ 是 $a$ 的倍數</p>
+</li>
+<li>
+<p>$a$ 是 $b$ 的因數</p>
+</li>
 </ul>
 </li>
 <li>
-<p>$c = r \cdot h + m \ (\bmod \ q)$</p>
+<p>$a \nmid b$</p>
+<ul>
+<li>$a$ 不整除 $b$</li>
+</ul>
 </li>
 </ul>
 <br/>
-<h2 id="decryption">Decryption</h2>
 <ul>
 <li>
-<p>Bob 收到 Alice 加密後的 $c$</p>
-</li>
-<li>
-<p>$a = f \cdot c \ (\bmod \ q)$</p>
+<p>$a$ divides $b$</p>
 <ul>
-<li>$a$ 的係數是在 $\lbrack - \tfrac{q}{2} , \tfrac{q}{2} \rbrack$ 之間，而非 $\lbrack 0 , q-1 \rbrack$ ，為了避免解密錯誤</li>
+<li>表示為 $a \mid b$</li>
 </ul>
-</li>
-<li>
-<p>$b = a\ (\bmod \ p)$</p>
-</li>
-<li>
-<p>$m = f_{p} \cdot b \ (\bmod \ p)$</p>
 </li>
 </ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-06-26</span>
+                <span>The article was updated on 2020-07-02</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/ntruencrypt/" data-title="NTRUEncrypt" data-via="d3m094035901" data-hashtags="crypto,lattice-based,post-quantum"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/ntruencrypt/" data-hashtag="crypto"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/ntruencrypt/" data-title="NTRUEncrypt"><i class="fab fa-line fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/division/" data-title="Division" data-via="d3m094035901" data-hashtags="math"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/division/" data-hashtag="math"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/division/" data-title="Division"><i class="fab fa-line fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/lattice-based/">lattice-based</a>,&nbsp;<a href="/tags/post-quantum/">post-quantum</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/math/">math</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/sagemath-installation/" class="prev" rel="prev" title="SageMath Installation"><i class="fas fa-angle-left fa-fw"></i>SageMath Installation</a>
-            <a href="/posts/division/" class="next" rel="next" title="Division">Division<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/ntruencrypt/" class="prev" rel="prev" title="NTRUEncrypt"><i class="fas fa-angle-left fa-fw"></i>NTRUEncrypt</a></div>
 </div>
 </article></div>
             </main><footer class="footer">

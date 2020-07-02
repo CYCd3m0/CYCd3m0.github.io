@@ -3,7 +3,24 @@
         <title>math - Tag - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/tags/math/</link>
         <description>math - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 16 May 2020 22:02:22 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/math/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 02 Jul 2020 12:17:21 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/math/" rel="self" type="application/rss+xml" /><item>
+    <title>Division</title>
+    <link>https://cycd3m0.github.io/posts/division/</link>
+    <pubDate>Thu, 02 Jul 2020 12:17:21 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/division/</guid>
+    <description><![CDATA[Division 一篇關於除法的廢文
+但我每次都忘記，所以還是寫下來
+   $a$ 除以 $b$
+  $a \div b$
+  $a$ divided by $b$
+  divide $a$ by $b$
+    $a$ 除 $b$
+ $b \div a$       $a \div b = c &hellip; r$
+  $a$ : 被除數 ， dividend
+  $b$ : 除數 $\hspace{0.7em}$ ， divisor
+  $c$ : 商 $\hspace{1.]]></description>
+</item><item>
     <title>Number</title>
     <link>https://cycd3m0.github.io/posts/number/</link>
     <pubDate>Sat, 16 May 2020 22:02:22 &#43;0800</pubDate>

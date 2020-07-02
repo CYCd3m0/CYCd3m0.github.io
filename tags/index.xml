@@ -3,7 +3,14 @@
         <title>Tags - Tag - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/tags/</link>
         <description>Tags - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 02 Jul 2020 12:17:21 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>math</title>
+    <link>https://cycd3m0.github.io/tags/math/</link>
+    <pubDate>Thu, 02 Jul 2020 12:17:21 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/tags/math/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>crypto</title>
     <link>https://cycd3m0.github.io/tags/crypto/</link>
     <pubDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</pubDate>
@@ -65,13 +72,6 @@
     <pubDate>Sun, 17 May 2020 06:34:53 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://cycd3m0.github.io/tags/ecc/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>D-H</title>
-    <link>https://cycd3m0.github.io/tags/d-h/</link>
-    <pubDate>Sun, 17 May 2020 03:54:38 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/tags/d-h/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
