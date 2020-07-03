@@ -8,11 +8,12 @@
         <title>Euler’s totient function - d3m0&#39;s Blog</title>
         <meta name="Description" content=""><meta property="og:title" content="Euler’s totient function" />
 <meta property="og:description" content="Euler’s totient function $\phi(n)$ 代表 $1,2, \cdots ,n$ 中，跟 $n$ 互質的整數個數
-  如果 $p$ 是質數
+  對於整數 $n$ ，可以把 $n$ 寫成 prime power 的乘積
+ $n = p_1^{k_1}p_2^{k_2} \cdots \hspace{0.3em} p_r^{k_r}$    如果 $p$ 是質數
   $\phi(p) = p - 1$
-  $\phi(p^{k}) = p^{k} - p^{k-1}$
-    如果 $n = p \times q \times r$ ( $p , q , r$ 皆為質數)
- $\phi(n) = \phi(p) \times \phi(q) \times \phi(r)$     Example $ \phi(90) = \phi(2) \times \phi(3^{2}) \times \phi(5) \\ \hspace{2." />
+  $\phi(\hspace{0.2em}p^{k}) = p^{k} - \hspace{0.2em} p^{k-1}$
+    $\phi(n) = \phi(\hspace{0.2em}p_1^{k_1}) \times \phi(\hspace{0.2em}p_2^{k_2}) \times \cdots \times \phi(\hspace{0.2em}p_r^{k_r})$
+   Example $ \phi(90) = \phi(2) \times \phi(3^{2}) \times \phi(5) \\ \hspace{2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cycd3m0.github.io/posts/eulers-totient-function/" />
 <meta property="article:published_time" content="2020-05-04T02:14:13+08:00" />
@@ -20,11 +21,12 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Euler’s totient function"/>
 <meta name="twitter:description" content="Euler’s totient function $\phi(n)$ 代表 $1,2, \cdots ,n$ 中，跟 $n$ 互質的整數個數
-  如果 $p$ 是質數
+  對於整數 $n$ ，可以把 $n$ 寫成 prime power 的乘積
+ $n = p_1^{k_1}p_2^{k_2} \cdots \hspace{0.3em} p_r^{k_r}$    如果 $p$ 是質數
   $\phi(p) = p - 1$
-  $\phi(p^{k}) = p^{k} - p^{k-1}$
-    如果 $n = p \times q \times r$ ( $p , q , r$ 皆為質數)
- $\phi(n) = \phi(p) \times \phi(q) \times \phi(r)$     Example $ \phi(90) = \phi(2) \times \phi(3^{2}) \times \phi(5) \\ \hspace{2."/>
+  $\phi(\hspace{0.2em}p^{k}) = p^{k} - \hspace{0.2em} p^{k-1}$
+    $\phi(n) = \phi(\hspace{0.2em}p_1^{k_1}) \times \phi(\hspace{0.2em}p_2^{k_2}) \times \cdots \times \phi(\hspace{0.2em}p_r^{k_r})$
+   Example $ \phi(90) = \phi(2) \times \phi(3^{2}) \times \phi(5) \\ \hspace{2."/>
 <meta name="application-name" content="d3m0&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="d3m0&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -42,7 +44,7 @@
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "math, Euler","wordcount":  102 ,
+            },"genre": "posts","keywords": "math, Euler, Carmichael","wordcount":  233 ,
         "url": "https:\/\/cycd3m0.github.io\/posts\/eulers-totient-function\/","datePublished": "2020-05-04T02:14:13+08:00","dateModified": "2020-05-04T02:14:13+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
@@ -127,8 +129,8 @@
         </div><article class="page single"><h1 class="single-title animated flipInX">Euler’s totient function</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-04>2020-05-04</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 102 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
+                <i class="fas fa-pencil-alt fa-fw"></i>about 233 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -143,11 +145,23 @@
     </li>
     <li><a href="#eulers-theorem">Euler’s theorem</a></li>
     <li><a href="#fermats-little-theorem">Fermat’s little theorem</a></li>
+    <li><a href="#carmichael-function">Carmichael function</a>
+      <ul>
+        <li><a href="#carmichaels-theorem">Carmichael&rsquo;s theorem</a></li>
+        <li><a href="#computing-lambdan-with-carmichaels-theorem">Computing $\lambda(n)$ with Carmichael&rsquo;s theorem</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="eulers-totient-function">Euler’s totient function</h2>
 <p>$\phi(n)$ 代表 $1,2, \cdots ,n$ 中，跟 $n$ 互質的整數個數</p>
 <ul>
+<li>
+<p>對於整數 $n$ ，可以把 $n$ 寫成 prime power 的乘積</p>
+<ul>
+<li>$n = p_1^{k_1}p_2^{k_2} \cdots \hspace{0.3em} p_r^{k_r}$</li>
+</ul>
+</li>
 <li>
 <p>如果 $p$ 是質數</p>
 <ul>
@@ -155,15 +169,12 @@
 <p>$\phi(p) = p - 1$</p>
 </li>
 <li>
-<p>$\phi(p^{k}) = p^{k} - p^{k-1}$</p>
+<p>$\phi(\hspace{0.2em}p^{k}) = p^{k} - \hspace{0.2em} p^{k-1}$</p>
 </li>
 </ul>
 </li>
 <li>
-<p>如果 $n = p \times q \times r$   ( $p , q , r$ 皆為質數)</p>
-<ul>
-<li>$\phi(n) = \phi(p) \times \phi(q) \times \phi(r)$</li>
-</ul>
+<p>$\phi(n) = \phi(\hspace{0.2em}p_1^{k_1}) \times \phi(\hspace{0.2em}p_2^{k_2}) \times \cdots \times \phi(\hspace{0.2em}p_r^{k_r})$</p>
 </li>
 </ul>
 <br/>
@@ -194,6 +205,44 @@ $</p>
 </ul>
 </li>
 </ul>
+<br/>
+<h2 id="carmichael-function">Carmichael function</h2>
+<p>$\lambda(n)$ 代表滿足下式的最小正整數 $m$</p>
+<p>$a^m \equiv 1 \ (\bmod \ n)$</p>
+<p>其中 $a$ 是 $1,2, \cdots ,n$ 中，<strong>所有</strong>跟 $n$ 互質的整數 <strong>(個數就是 $\phi(n)$)</strong></p>
+<br/>
+<p>參考上面的 <a href="https://cycd3m0.github.io/posts/eulers-totient-function/#eulers-theorem" target="_blank" rel="noopener noreffer">Euler’s theorem</a></p>
+<p>在 $a , n$ 互質的狀況下， $a^{\phi(n)} \equiv 1 \ (\bmod \ n)$ ， $\phi(n)$ 滿足條件，但不一定是滿足條件的<strong>最小</strong>正整數</p>
+<p>因此 $\phi(n) \ge \lambda(n)$</p>
+<br/>
+<h3 id="carmichaels-theorem">Carmichael&rsquo;s theorem</h3>
+<p>Carmichael&rsquo;s theorem 解釋了針對 prime power 如何計算 $\lambda(p^k)$</p>
+<ul>
+<li>
+<p>對於 odd prime 的 power 以及 $2 , 4\ $ ， $\lambda(p^k) = \phi(p^k)$</p>
+</li>
+<li>
+<p>對於 $2^k\ $ ($k$ 為大於 2 的整數) $\hspace{2.2em}$ ， $\lambda(p^k) = \frac{1}{2} \phi(p^k)$</p>
+</li>
+</ul>
+<br/>
+<p>$\lambda(p^k) = \begin{cases}
+\phi(p^k) \hspace{1.5em} \text{if} \hspace{0.5em} p^k = 2,3,4,5,7,9,11,13,17,19,23,25,27,29,31,&hellip;\\
+\frac{1}{2} \phi(p^k) \hspace{0.8em} \text{if} \hspace{0.5em} p^k = 8,16,32,64,128,256,&hellip;
+\end{cases}$</p>
+<br/>
+<h3 id="computing-lambdan-with-carmichaels-theorem">Computing $\lambda(n)$ with Carmichael&rsquo;s theorem</h3>
+<ul>
+<li>
+<p>對於整數 $n$ ，可以把 $n$ 寫成 prime power 的乘積</p>
+<ul>
+<li>$n = p_1^{k_1}p_2^{k_2} \cdots \hspace{0.3em} p_r^{k_r}$</li>
+</ul>
+</li>
+<li>
+<p>$\lambda(n) = \text{lcm}( \lambda(p_1^{k_1})\ ,\ \lambda(p_2^{k_2})\ ,\ &hellip;\ ,\ \lambda(p_r^{k_r}))$</p>
+</li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -205,13 +254,13 @@ $</p>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/eulers-totient-function/" data-title="Euler’s totient function" data-via="d3m094035901" data-hashtags="math,Euler"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/eulers-totient-function/" data-hashtag="math"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/eulers-totient-function/" data-title="Euler’s totient function"><i class="fab fa-line fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/eulers-totient-function/" data-title="Euler’s totient function" data-via="d3m094035901" data-hashtags="math,Euler,Carmichael"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/eulers-totient-function/" data-hashtag="math"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/eulers-totient-function/" data-title="Euler’s totient function"><i class="fab fa-line fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/math/">math</a>,&nbsp;<a href="/tags/euler/">Euler</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/math/">math</a>,&nbsp;<a href="/tags/euler/">Euler</a>,&nbsp;<a href="/tags/carmichael/">Carmichael</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>

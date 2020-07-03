@@ -59,11 +59,12 @@ $\Bbb{I} \hspace{1.35em}$ 虛數]]></description>
     <author>Author</author>
     <guid>https://cycd3m0.github.io/posts/eulers-totient-function/</guid>
     <description><![CDATA[Euler’s totient function $\phi(n)$ 代表 $1,2, \cdots ,n$ 中，跟 $n$ 互質的整數個數
-  如果 $p$ 是質數
+  對於整數 $n$ ，可以把 $n$ 寫成 prime power 的乘積
+ $n = p_1^{k_1}p_2^{k_2} \cdots \hspace{0.3em} p_r^{k_r}$    如果 $p$ 是質數
   $\phi(p) = p - 1$
-  $\phi(p^{k}) = p^{k} - p^{k-1}$
-    如果 $n = p \times q \times r$ ( $p , q , r$ 皆為質數)
- $\phi(n) = \phi(p) \times \phi(q) \times \phi(r)$     Example $ \phi(90) = \phi(2) \times \phi(3^{2}) \times \phi(5) \\ \hspace{2.]]></description>
+  $\phi(\hspace{0.2em}p^{k}) = p^{k} - \hspace{0.2em} p^{k-1}$
+    $\phi(n) = \phi(\hspace{0.2em}p_1^{k_1}) \times \phi(\hspace{0.2em}p_2^{k_2}) \times \cdots \times \phi(\hspace{0.2em}p_r^{k_r})$
+   Example $ \phi(90) = \phi(2) \times \phi(3^{2}) \times \phi(5) \\ \hspace{2.]]></description>
 </item><item>
     <title>Chinese Remainder Theorem</title>
     <link>https://cycd3m0.github.io/posts/chinese-remainder-theorem/</link>

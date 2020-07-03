@@ -1,9 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Euler - Tag - d3m0&#39;s Blog</title>
-        <link>https://cycd3m0.github.io/tags/euler/</link>
-        <description>Euler - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 04 May 2020 02:14:13 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/euler/" rel="self" type="application/rss+xml" /><item>
+        <title>Carmichael - Tag - d3m0&#39;s Blog</title>
+        <link>https://cycd3m0.github.io/tags/carmichael/</link>
+        <description>Carmichael - Tag - d3m0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 04 May 2020 02:14:13 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/carmichael/" rel="self" type="application/rss+xml" /><item>
     <title>Euler’s totient function</title>
     <link>https://cycd3m0.github.io/posts/eulers-totient-function/</link>
     <pubDate>Mon, 04 May 2020 02:14:13 &#43;0800</pubDate>
