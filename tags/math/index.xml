@@ -3,7 +3,20 @@
         <title>math - Tag - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/tags/math/</link>
         <description>math - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 02 Jul 2020 12:17:21 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/math/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 03 Jul 2020 15:02:21 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/math/" rel="self" type="application/rss+xml" /><item>
+    <title>GCDxLCM</title>
+    <link>https://cycd3m0.github.io/posts/gcdxlcm/</link>
+    <pubDate>Fri, 03 Jul 2020 15:02:21 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/gcdxlcm/</guid>
+    <description><![CDATA[$$ m \times n = \text{gcd} (m,n) \times \text{lcm} (m,n) $$
+ $$ m = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k} $$
+$$ n = p_1^{b_1} \times p_2^{b_2} \times \cdots \times p_k^{b_k} $$
+ $$ \text{gcd} (m,n) = p_1^{\text{min}(a_1,b_1)} \times \cdots \times p_k^{\text{min}(a_k,b_k)} $$
+$$ \text{lcm} (m,n) = p_1^{\text{max}(a_1,b_1)} \times \cdots \times p_k^{\text{max}(a_k,b_k)} $$
+ $$ \because \text{min} (a_i,b_i) + \text{max} (a_i,b_i) = a_i + b_i $$
+$$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1+b_1} \times \cdots \times p_k^{a_k+b_k} $$]]></description>
+</item><item>
     <title>Division</title>
     <link>https://cycd3m0.github.io/posts/division/</link>
     <pubDate>Thu, 02 Jul 2020 12:17:21 &#43;0800</pubDate>

@@ -3,7 +3,20 @@
         <title>All Posts - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/posts/</link>
         <description>All Posts | d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 02 Jul 2020 12:17:21 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 03 Jul 2020 15:02:21 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>GCDxLCM</title>
+    <link>https://cycd3m0.github.io/posts/gcdxlcm/</link>
+    <pubDate>Fri, 03 Jul 2020 15:02:21 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/gcdxlcm/</guid>
+    <description><![CDATA[$$ m \times n = \text{gcd} (m,n) \times \text{lcm} (m,n) $$
+ $$ m = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k} $$
+$$ n = p_1^{b_1} \times p_2^{b_2} \times \cdots \times p_k^{b_k} $$
+ $$ \text{gcd} (m,n) = p_1^{\text{min}(a_1,b_1)} \times \cdots \times p_k^{\text{min}(a_k,b_k)} $$
+$$ \text{lcm} (m,n) = p_1^{\text{max}(a_1,b_1)} \times \cdots \times p_k^{\text{max}(a_k,b_k)} $$
+ $$ \because \text{min} (a_i,b_i) + \text{max} (a_i,b_i) = a_i + b_i $$
+$$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1+b_1} \times \cdots \times p_k^{a_k+b_k} $$]]></description>
+</item><item>
     <title>Division</title>
     <link>https://cycd3m0.github.io/posts/division/</link>
     <pubDate>Thu, 02 Jul 2020 12:17:21 &#43;0800</pubDate>
@@ -127,22 +140,5 @@
   如果計算出 $g = 1$ ，就換一個 $h$ 重新計算 $g$
   $g$ 的 order 為 $q$
     $(p,q,g)$ 是公開的資訊]]></description>
-</item><item>
-    <title>Number</title>
-    <link>https://cycd3m0.github.io/posts/number/</link>
-    <pubDate>Sat, 16 May 2020 22:02:22 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/posts/number/</guid>
-    <description><![CDATA[數 $$ \Bbb{N} \sube \Bbb{Z} \sube \Bbb{Q} \sube \Bbb{R} \sube \Bbb{C} \\ \text{自然數} \sube \text{整數} \sube \text{有理數} \sube \text{實數} \sube \text{複數} $$
-$\Bbb{C} \hspace{1.1em}$ 複數
-$\Bbb{R} \hspace{1.1em}$ 實數
-$\Bbb{R}^{+} \hspace{0.5em}$ 正數
-$\Bbb{R}^{-} \hspace{0.5em}$ 負數
-$\Bbb{Q} \hspace{1.05em}$ 有理數
-$\Bbb{Z} \hspace{1.15em}$ 整數
-$\Bbb{Z}^{+} \hspace{0.5em}$ 正整數
-$\Bbb{Z}^{-} \hspace{0.5em}$ 負整數
-$\Bbb{N} \hspace{1.05em}$ 自然數 (包括正整數和 $0$)
-$\Bbb{I} \hspace{1.35em}$ 虛數]]></description>
 </item></channel>
 </rss>
