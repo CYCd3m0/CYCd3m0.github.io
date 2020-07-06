@@ -3,7 +3,27 @@
         <title>All Posts - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/posts/</link>
         <description>All Posts | d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 03 Jul 2020 15:02:21 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 07 Jul 2020 02:06:27 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>RSA-CRT</title>
+    <link>https://cycd3m0.github.io/posts/rsa-crt/</link>
+    <pubDate>Tue, 07 Jul 2020 02:06:27 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/rsa-crt/</guid>
+    <description><![CDATA[RSA with CRT $$ M = C^d \ (\bmod \ n) $$
+對 $C$ 解密的過程，可以透過 CRT 加速  假設兩個未知數 $m_1 , m_2$ 如下
+$m_1 = M \ (\bmod \ p) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ p) = C^d \ (\bmod \ p)$
+$m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ q) = C^d \ (\bmod \ q)$]]></description>
+</item><item>
+    <title>Extended Euclidean</title>
+    <link>https://cycd3m0.github.io/posts/extended-euclidean/</link>
+    <pubDate>Mon, 06 Jul 2020 22:47:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/extended-euclidean/</guid>
+    <description><![CDATA[貝祖定理 (Bézout&rsquo;s lemma) 對任意整數 $a , b$
+ 方程式 $ax+by=m \hspace{1em} (x,y)$ 有整數解 $\hspace{1em} \leftrightarrow \hspace{1em}$ $\text{gcd} (a,b) \mid m$
+ 擴展歐基里得 (Extended Euclidean) 可計算出 $\text{gcd} (a,b) ,\ x ,\ y$
+ 1 2 3 4 5 6 7  def extended_Euclidean(a, b) : if b == 0 : return (a, 1, 0) else : g, x, y = extended_Euclidean(b, a%b) x, y = y, (x - (a // b) * y) return (g, x, y)    模反元素 (modular multiplicative inverse)  Using extended Euclidean 如果 $\text{gcd} = 1$ ，則存在模反元素]]></description>
+</item><item>
     <title>GCDxLCM</title>
     <link>https://cycd3m0.github.io/posts/gcdxlcm/</link>
     <pubDate>Fri, 03 Jul 2020 15:02:21 &#43;0800</pubDate>
@@ -113,32 +133,5 @@ $$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1+b_1} \times \c
   $b$ 是 Bob 的私鑰
   $B$ 是可公開的資訊
     Alice 計算 $s = B^{a} \bmod p$]]></description>
-</item><item>
-    <title>Hashpump Usage</title>
-    <link>https://cycd3m0.github.io/posts/hashpump-usage/</link>
-    <pubDate>Sun, 17 May 2020 03:36:30 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/posts/hashpump-usage/</guid>
-    <description><![CDATA[條件   已知 hash(secert || message) (hash值)
-  已知 secert 長度， message 內容，未知 secret 內容
-  可利用 hashpump 來算出 hash(secret || message || padding || XXXXX)
- padding 做長度擴充， XXXXX 可填任意字串    用法   Input Signature : $\hspace{2em}$ 填入 hash(secert || message)
-  Input Data : $\hspace{3.8em}$ 填入 message
-  Input Key Length : $\hspace{1.4em}$ 填入 secert 長度
-  Input Data to Add : $\hspace{1.]]></description>
-</item><item>
-    <title>DSA</title>
-    <link>https://cycd3m0.github.io/posts/dsa/</link>
-    <pubDate>Sun, 17 May 2020 02:44:35 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/posts/dsa/</guid>
-    <description><![CDATA[Key generation Parameter generation   選擇一個 hash function : $H$
-  選擇一個質數 : $q$
-  選擇一個質數 : $p\ $ ，使 $p-1$ 是 $q$ 的倍數
-  隨機選擇一個整數 $h$ $(1 &lt; h &lt; p-1)$
- $h$ 一般選擇 $2$    計算 $g = h^{\frac{p-1}{q}} \ (\bmod\ p)$
-  如果計算出 $g = 1$ ，就換一個 $h$ 重新計算 $g$
-  $g$ 的 order 為 $q$
-    $(p,q,g)$ 是公開的資訊]]></description>
 </item></channel>
 </rss>

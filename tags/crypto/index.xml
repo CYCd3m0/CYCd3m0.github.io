@@ -3,7 +3,27 @@
         <title>crypto - Tag - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/tags/crypto/</link>
         <description>crypto - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/crypto/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 07 Jul 2020 02:06:27 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/crypto/" rel="self" type="application/rss+xml" /><item>
+    <title>RSA-CRT</title>
+    <link>https://cycd3m0.github.io/posts/rsa-crt/</link>
+    <pubDate>Tue, 07 Jul 2020 02:06:27 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/rsa-crt/</guid>
+    <description><![CDATA[RSA with CRT $$ M = C^d \ (\bmod \ n) $$
+對 $C$ 解密的過程，可以透過 CRT 加速  假設兩個未知數 $m_1 , m_2$ 如下
+$m_1 = M \ (\bmod \ p) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ p) = C^d \ (\bmod \ p)$
+$m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ q) = C^d \ (\bmod \ q)$]]></description>
+</item><item>
+    <title>Extended Euclidean</title>
+    <link>https://cycd3m0.github.io/posts/extended-euclidean/</link>
+    <pubDate>Mon, 06 Jul 2020 22:47:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/extended-euclidean/</guid>
+    <description><![CDATA[貝祖定理 (Bézout&rsquo;s lemma) 對任意整數 $a , b$
+ 方程式 $ax+by=m \hspace{1em} (x,y)$ 有整數解 $\hspace{1em} \leftrightarrow \hspace{1em}$ $\text{gcd} (a,b) \mid m$
+ 擴展歐基里得 (Extended Euclidean) 可計算出 $\text{gcd} (a,b) ,\ x ,\ y$
+ 1 2 3 4 5 6 7  def extended_Euclidean(a, b) : if b == 0 : return (a, 1, 0) else : g, x, y = extended_Euclidean(b, a%b) x, y = y, (x - (a // b) * y) return (g, x, y)    模反元素 (modular multiplicative inverse)  Using extended Euclidean 如果 $\text{gcd} = 1$ ，則存在模反元素]]></description>
+</item><item>
     <title>NTRUEncrypt</title>
     <link>https://cycd3m0.github.io/posts/ntruencrypt/</link>
     <pubDate>Fri, 26 Jun 2020 19:44:07 &#43;0800</pubDate>

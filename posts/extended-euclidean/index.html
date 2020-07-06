@@ -5,47 +5,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>GCDxLCM - d3m0&#39;s Blog</title>
-        <meta name="Description" content=""><meta property="og:title" content="GCDxLCM" />
-<meta property="og:description" content="$$ m \times n = \text{gcd} (m,n) \times \text{lcm} (m,n) $$
- $$ m = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k} $$
-$$ n = p_1^{b_1} \times p_2^{b_2} \times \cdots \times p_k^{b_k} $$
- $$ \text{gcd} (m,n) = p_1^{\text{min}(a_1,b_1)} \times \cdots \times p_k^{\text{min}(a_k,b_k)} $$
-$$ \text{lcm} (m,n) = p_1^{\text{max}(a_1,b_1)} \times \cdots \times p_k^{\text{max}(a_k,b_k)} $$
- $$ \because \text{min} (a_i,b_i) &#43; \text{max} (a_i,b_i) = a_i &#43; b_i $$
-$$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1&#43;b_1} \times \cdots \times p_k^{a_k&#43;b_k} $$" />
+        <title>Extended Euclidean - d3m0&#39;s Blog</title>
+        <meta name="Description" content=""><meta property="og:title" content="Extended Euclidean" />
+<meta property="og:description" content="貝祖定理 (Bézout&rsquo;s lemma) 對任意整數 $a , b$
+ 方程式 $ax&#43;by=m \hspace{1em} (x,y)$ 有整數解 $\hspace{1em} \leftrightarrow \hspace{1em}$ $\text{gcd} (a,b) \mid m$
+ 擴展歐基里得 (Extended Euclidean) 可計算出 $\text{gcd} (a,b) ,\ x ,\ y$
+ 1 2 3 4 5 6 7  def extended_Euclidean(a, b) : if b == 0 : return (a, 1, 0) else : g, x, y = extended_Euclidean(b, a%b) x, y = y, (x - (a // b) * y) return (g, x, y)    模反元素 (modular multiplicative inverse)  Using extended Euclidean 如果 $\text{gcd} = 1$ ，則存在模反元素" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cycd3m0.github.io/posts/gcdxlcm/" />
-<meta property="article:published_time" content="2020-07-03T15:02:21+08:00" />
-<meta property="article:modified_time" content="2020-07-03T15:02:21+08:00" />
+<meta property="og:url" content="https://cycd3m0.github.io/posts/extended-euclidean/" />
+<meta property="article:published_time" content="2020-07-06T22:47:01+08:00" />
+<meta property="article:modified_time" content="2020-07-06T22:47:01+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="GCDxLCM"/>
-<meta name="twitter:description" content="$$ m \times n = \text{gcd} (m,n) \times \text{lcm} (m,n) $$
- $$ m = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k} $$
-$$ n = p_1^{b_1} \times p_2^{b_2} \times \cdots \times p_k^{b_k} $$
- $$ \text{gcd} (m,n) = p_1^{\text{min}(a_1,b_1)} \times \cdots \times p_k^{\text{min}(a_k,b_k)} $$
-$$ \text{lcm} (m,n) = p_1^{\text{max}(a_1,b_1)} \times \cdots \times p_k^{\text{max}(a_k,b_k)} $$
- $$ \because \text{min} (a_i,b_i) &#43; \text{max} (a_i,b_i) = a_i &#43; b_i $$
-$$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1&#43;b_1} \times \cdots \times p_k^{a_k&#43;b_k} $$"/>
+<meta name="twitter:title" content="Extended Euclidean"/>
+<meta name="twitter:description" content="貝祖定理 (Bézout&rsquo;s lemma) 對任意整數 $a , b$
+ 方程式 $ax&#43;by=m \hspace{1em} (x,y)$ 有整數解 $\hspace{1em} \leftrightarrow \hspace{1em}$ $\text{gcd} (a,b) \mid m$
+ 擴展歐基里得 (Extended Euclidean) 可計算出 $\text{gcd} (a,b) ,\ x ,\ y$
+ 1 2 3 4 5 6 7  def extended_Euclidean(a, b) : if b == 0 : return (a, 1, 0) else : g, x, y = extended_Euclidean(b, a%b) x, y = y, (x - (a // b) * y) return (g, x, y)    模反元素 (modular multiplicative inverse)  Using extended Euclidean 如果 $\text{gcd} = 1$ ，則存在模反元素"/>
 <meta name="application-name" content="d3m0&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="d3m0&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/gcdxlcm/" /><link rel="prev" href="https://cycd3m0.github.io/posts/division/" /><link rel="next" href="https://cycd3m0.github.io/posts/extended-euclidean/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/extended-euclidean/" /><link rel="prev" href="https://cycd3m0.github.io/posts/gcdxlcm/" /><link rel="next" href="https://cycd3m0.github.io/posts/rsa-crt/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "GCDxLCM",
+        "headline": "Extended Euclidean",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/cycd3m0.github.io\/posts\/gcdxlcm\/"
+            "@id": "https:\/\/cycd3m0.github.io\/posts\/extended-euclidean\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "math","wordcount":  86 ,
-        "url": "https:\/\/cycd3m0.github.io\/posts\/gcdxlcm\/","datePublished": "2020-07-03T15:02:21+08:00","dateModified": "2020-07-03T15:02:21+08:00","publisher": {
+            },"genre": "posts","keywords": "math, crypto","wordcount":  163 ,
+        "url": "https:\/\/cycd3m0.github.io\/posts\/extended-euclidean\/","datePublished": "2020-07-06T22:47:01+08:00","dateModified": "2020-07-06T22:47:01+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -126,70 +120,108 @@ $$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1&#43;b_1} \time
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">GCDxLCM</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Extended Euclidean</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-07-03>2020-07-03</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 86 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-07-06>2020-07-06</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 163 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><br/>
-<p>$$
-m \times n = \text{gcd} (m,n) \times  \text{lcm} (m,n)
-$$</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#貝祖定理-bézouts-lemma">貝祖定理 (Bézout&rsquo;s lemma)</a></li>
+    <li><a href="#擴展歐基里得-extended-euclidean">擴展歐基里得 (Extended Euclidean)</a></li>
+    <li><a href="#模反元素-modular-multiplicative-inverse">模反元素 (modular multiplicative inverse)</a>
+      <ul>
+        <li><a href="#using-extended-euclidean">Using extended Euclidean</a></li>
+        <li><a href="#using-eulers-theorem">Using Euler&rsquo;s theorem</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="貝祖定理-bézouts-lemma">貝祖定理 (Bézout&rsquo;s lemma)</h2>
+<p>對任意整數 $a , b$</p>
 <br/>
-<p>$$
-m = p_1^{a_1} \times p_2^{a_2} \times \cdots \times p_k^{a_k}
-$$</p>
-<p>$$
-n = p_1^{b_1} \times p_2^{b_2} \times \cdots \times p_k^{b_k}
-$$</p>
+<p>方程式 $ax+by=m \hspace{1em} (x,y)$ 有整數解 $\hspace{1em} \leftrightarrow \hspace{1em}$ $\text{gcd} (a,b) \mid m$</p>
 <br/>
-<p>$$
-\text{gcd} (m,n) = p_1^{\text{min}(a_1,b_1)} \times \cdots \times p_k^{\text{min}(a_k,b_k)}
-$$</p>
-<p>$$
-\text{lcm} (m,n) = p_1^{\text{max}(a_1,b_1)} \times \cdots \times p_k^{\text{max}(a_k,b_k)}
-$$</p>
+<h2 id="擴展歐基里得-extended-euclidean">擴展歐基里得 (Extended Euclidean)</h2>
+<p>可計算出 $\text{gcd} (a,b) ,\ x ,\ y$</p>
 <br/>
-<p>$$
-\because \text{min} (a_i,b_i) + \text{max} (a_i,b_i) = a_i + b_i
-$$</p>
-<p>$$
-\therefore \text{gcd} (m,n) \times  \text{lcm} (m,n) = p_1^{a_1+b_1} \times \cdots \times p_k^{a_k+b_k}
-$$</p>
-<p>$$
-\hspace{4.7em} = m \times n
-$$</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">extended_Euclidean</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="n">g</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">extended_Euclidean</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span>
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<br/>
+<h2 id="模反元素-modular-multiplicative-inverse">模反元素 (modular multiplicative inverse)</h2>
+<br/>
+<h3 id="using-extended-euclidean">Using extended Euclidean</h3>
+<p>如果 $\text{gcd} = 1$ ，則存在模反元素</p>
+<p>$ax + by = 1$</p>
+<p>$\because ax + by \equiv ax \equiv 1 \ ( \bmod \ b )$</p>
+<p>$\therefore x$ 為 $a$ 對 $b$ 之模反元素</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>$x + kb$ 皆為 $a$ 對 $b$ 之模反元素</p>
+<p>一般取最小正整數解 $0 &lt; x &lt; b$</p>
+</div>
+        </div>
+    </div>
+<br/>
+<p><strong>如果 $\text{gcd} \ne 1$ ，則不存在模反元素</strong></p>
+<br/>
+<h3 id="using-eulers-theorem">Using Euler&rsquo;s theorem</h3>
+<p>如果 $a , n$ 互質</p>
+<p>則 $a^{\phi(n)} \equiv 1 \ (\bmod \ n)$</p>
+<br/>
+<p>$\because a^{\phi(n)} = a \times a^{\phi(n) - 1}$</p>
+<p>$\therefore a^{\phi(n) - 1}$ 為 $a$ 對 $n$ 之模反元素</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-07-03</span>
+                <span>The article was updated on 2020-07-06</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/gcdxlcm/" data-title="GCDxLCM" data-via="d3m094035901" data-hashtags="math"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/gcdxlcm/" data-hashtag="math"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/gcdxlcm/" data-title="GCDxLCM"><i class="fab fa-line fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/extended-euclidean/" data-title="Extended Euclidean" data-via="d3m094035901" data-hashtags="math,crypto"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/extended-euclidean/" data-hashtag="math"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/extended-euclidean/" data-title="Extended Euclidean"><i class="fab fa-line fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/math/">math</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/math/">math</a>,&nbsp;<a href="/tags/crypto/">crypto</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/division/" class="prev" rel="prev" title="Division"><i class="fas fa-angle-left fa-fw"></i>Division</a>
-            <a href="/posts/extended-euclidean/" class="next" rel="next" title="Extended Euclidean">Extended Euclidean<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/gcdxlcm/" class="prev" rel="prev" title="GCDxLCM"><i class="fas fa-angle-left fa-fw"></i>GCDxLCM</a>
+            <a href="/posts/rsa-crt/" class="next" rel="next" title="RSA-CRT">RSA-CRT<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">

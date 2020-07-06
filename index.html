@@ -11,7 +11,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://cycd3m0.github.io/" />
-<meta property="og:updated_time" content="2020-07-03T15:02:21+08:00" />
+<meta property="og:updated_time" content="2020-07-07T02:06:27+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="d3m0&#39;s Blog"/>
 <meta name="twitter:description" content=""/>
@@ -101,7 +101,29 @@
         data-sizes="auto"
         alt="Home"
         title="Home" /></a>
-        </div><h2 class="home-subtitle"><div id="id-a30f15" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/CYCd3m0" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://twitter.com/d3m094035901" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://facebook.com/100022808748471" title="facebook" target="_blank" rel="noopener noreffer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/CYCd3m0" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:eugene5241@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+        </div><h2 class="home-subtitle"><div id="id-d21255" class="typeit"></div></h2><div class="social-links"><a href="https://github.com/CYCd3m0" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://twitter.com/d3m094035901" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://facebook.com/100022808748471" title="facebook" target="_blank" rel="noopener noreffer me"><i class="fab fa-facebook fa-fw"></i></a><a href="https://t.me/CYCd3m0" title="Telegram" target="_blank" rel="noopener noreffer me"><i class="fab fa-telegram-plane fa-fw"></i></a><a href="mailto:eugene5241@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a></div></div>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/rsa-crt/">RSA-CRT</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
+            published on&nbsp;<time datetime=2020-07-07>2020-07-07</time>
+        </span></div><div class="content">RSA with CRT $$ M = C^d \ (\bmod \ n) $$
+對 $C$ 解密的過程，可以透過 CRT 加速  假設兩個未知數 $m_1 , m_2$ 如下
+$m_1 = M \ (\bmod \ p) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ p) = C^d \ (\bmod \ p)$
+$m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ q) = C^d \ (\bmod \ q)$</div><div class="post-footer">
+        <a href="/posts/rsa-crt/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/math/">math</a>,&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/rsa/">RSA</a>,&nbsp;<a href="/tags/crt/">CRT</a></div></div>
+</article>
+<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/extended-euclidean/">Extended Euclidean</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
+            published on&nbsp;<time datetime=2020-07-06>2020-07-06</time>
+        </span></div><div class="content">貝祖定理 (Bézout&rsquo;s lemma) 對任意整數 $a , b$
+ 方程式 $ax+by=m \hspace{1em} (x,y)$ 有整數解 $\hspace{1em} \leftrightarrow \hspace{1em}$ $\text{gcd} (a,b) \mid m$
+ 擴展歐基里得 (Extended Euclidean) 可計算出 $\text{gcd} (a,b) ,\ x ,\ y$
+ 1 2 3 4 5 6 7  def extended_Euclidean(a, b) : if b == 0 : return (a, 1, 0) else : g, x, y = extended_Euclidean(b, a%b) x, y = y, (x - (a // b) * y) return (g, x, y)    模反元素 (modular multiplicative inverse)  Using extended Euclidean 如果 $\text{gcd} = 1$ ，則存在模反元素</div><div class="post-footer">
+        <a href="/posts/extended-euclidean/">Read More</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/math/">math</a>,&nbsp;<a href="/tags/crypto/">crypto</a></div></div>
+</article>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/gcdxlcm/">GCDxLCM</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
@@ -165,32 +187,6 @@ $$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1+b_1} \times \c
         <a href="/posts/sagemath-installation/">Read More</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sage/">sage</a>,&nbsp;<a href="/tags/installation/">installation</a></div></div>
 </article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/binary-complement/">補數</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
-            published on&nbsp;<time datetime=2020-05-26>2020-05-26</time>
-        </span></div><div class="content">Ones&rsquo; complement 計算  對每個 bit 做 NOT 運算   Two&rsquo;s complement 計算  對每個 bit 做 NOT 運算，並在 LSB 加上 1   說明   對一個整數 $a$ (不論正負)，取補數會得到 $-a$ ，再取一次補數則會得到 $a$
-  ones&rsquo; complement
-  $\hspace{0.4em}$5 = 0101
-  -5 = 1010
-    two&rsquo;s complement
-  -7 = 1001
-  $\hspace{0.4em}$7 = 0111
-    對一個以二進位表示的正整數 $a$ (MSB 為 0) ，可以直觀的看出 $a$ 的值，並透過取補數的方式，得到 $-a$ 的二進位表示法</div><div class="post-footer">
-        <a href="/posts/binary-complement/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/binary/">binary</a>,&nbsp;<a href="/tags/signed-number/">signed number</a></div></div>
-</article>
-<article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/ecc/">ECC</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span>&nbsp;<span class="post-publish">
-            published on&nbsp;<time datetime=2020-05-17>2020-05-17</time>
-        </span></div><div class="content">Elliptic Curve $$ y^{2} = x^{3} + ax + b \\ \text{where} \hspace{1em} 4a^{3} + 27b^{2} \not = 0 $$
-  單位元素 $0$ ，代表一個無窮遠的點
-  $P$ 的反元素 $-P$ ，代表 $P$ 對 $x$ 軸的鏡射
- $P + (-P) = 0$     定義 $$ \lbrace (x,y) \isin \Bbb{R}^{2} \hspace{0.5em} | \hspace{0.5em} y^{2} = x^{3} + ax + b \hspace{0.5em} , \hspace{0.5em} 4a^{3} + 27b^{2} \not = 0 \rbrace \cup \lbrace 0 \rbrace $$</div><div class="post-footer">
-        <a href="/posts/ecc/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/asymmetric/">asymmetric</a>,&nbsp;<a href="/tags/ecc/">ECC</a></div></div>
-</article>
 <ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -216,6 +212,6 @@ $$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1+b_1} \times \c
                 <i class="fas fa-comment fa-fw"></i>
             </a>
         </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
-    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-a30f15":"I'm d3m0 , a beginner in CTF"},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"SW52LR4DGP","algoliaIndex":"d3m0_blog","algoliaSearchKey":"b6f298fb0223168453cc898f455f49e2","noResultsFound":"No results found","type":"algolia"},"typeit":[["id-a30f15"]]};
+    window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-d21255":"I'm d3m0 , a beginner in CTF"},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"SW52LR4DGP","algoliaIndex":"d3m0_blog","algoliaSearchKey":"b6f298fb0223168453cc898f455f49e2","noResultsFound":"No results found","type":"algolia"},"typeit":[["id-d21255"]]};
 </script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
