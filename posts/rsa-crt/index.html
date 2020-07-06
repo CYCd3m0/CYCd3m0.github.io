@@ -38,7 +38,7 @@ $m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "math, crypto, RSA, CRT","wordcount":  337 ,
+            },"genre": "posts","keywords": "math, crypto, RSA, CRT","wordcount":  416 ,
         "url": "https:\/\/cycd3m0.github.io\/posts\/rsa-crt\/","datePublished": "2020-07-07T02:06:27+08:00","dateModified": "2020-07-07T02:06:27+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
@@ -123,7 +123,7 @@ $m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod
         </div><article class="page single"><h1 class="single-title animated flipInX">RSA-CRT</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-07-07>2020-07-07</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 337 words&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 416 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
@@ -132,14 +132,18 @@ $m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#rsa-with-crt">RSA with CRT</a></li>
+    <li><a href="#rsa-with-crt">RSA with CRT</a>
+      <ul>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="rsa-with-crt">RSA with CRT</h2>
 <p>$$
 M = C^d \ (\bmod \ n)
 $$</p>
-<div id="id-928822">對 $C$ 解密的過程，可以透過 <a href="https://cycd3m0.github.io/posts/chinese-remainder-theorem/" target="_blank" rel="noopener noreffer">CRT</a> 加速</div>
+<div id="id-c11225">對 $C$ 解密的過程，可以透過 <a href="https://cycd3m0.github.io/posts/chinese-remainder-theorem/" target="_blank" rel="noopener noreffer">CRT</a> 加速</div>
 <br/>
 <p>假設兩個未知數 $m_1 , m_2$ 如下</p>
 <p>$m_1 = M \ (\bmod \ p) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ p) = C^d \ (\bmod \ p)$</p>
@@ -177,7 +181,7 @@ based on <a href="https://cycd3m0.github.io/posts/eulers-totient-function/#ferma
 <p>同理 $\hspace{2.7em} d_q \hspace{0.2em} = d \ (\bmod \ (q-1))$</p>
 <p>$\hspace{4.4em} m_2 = C^{\hspace{0.1em} d_q} \ (\bmod \ q)$</p>
 <br/>
-<p>計算 $d_p , d_q$ 有更快的方法 (?)</p>
+<p>計算 $d_p , d_q$ 有更快的方法 <del>(但我不會證明)</del></p>
 <p>$d_p = \text{inverse} (e \hspace{0.2em} , \hspace{0.2em} p-1)$</p>
 <p>$d_q = \text{inverse} (e \hspace{0.2em} , \hspace{0.2em} q-1)$</p>
 </div>
@@ -202,6 +206,19 @@ $</p>
 <p>$k$ 的最小正整數解為 $q^{-1}(m_1 - m_2)\ \bmod \ p$</p>
 <br/>
 <p>因此 $M = m_2 + q \Big( q^{-1}(m_1 - m_2)\ \bmod \ p \Big)$</p>
+<br/>
+<h3 id="conclusion">Conclusion</h3>
+<br/>
+<p>$d_p \hspace{0.4em} = \hspace{0.3em} d \hspace{0.5em} (\bmod \ (p-1))$</p>
+<p>$\hspace{1.7em} = \hspace{0.3em} \text{inverse} (e \hspace{0.2em} , \hspace{0.2em} p-1)$</p>
+<p>$d_q \hspace{0.4em} = \hspace{0.3em} d \hspace{0.5em} (\bmod \ (q-1))$</p>
+<p>$\hspace{1.7em} = \hspace{0.3em} \text{inverse} (e \hspace{0.2em} , \hspace{0.2em} q-1)$</p>
+<p>$q^{-1} = \hspace{0.3em} \text{inverse} (q \hspace{0.2em} , \hspace{0.2em} p)$</p>
+<br/>
+<p>$m_1 \hspace{0.1em} = \hspace{0.3em} C^{d_p} \ (\bmod \ p)$</p>
+<p>$m_2 \hspace{0.1em} = \hspace{0.3em} C^{d_q} \ (\bmod \ q)$</p>
+<br/>
+<p>$M \hspace{0.3em} = \hspace{0.3em} m_2 + q \Big( q^{-1}(m_1 - m_2)\ \bmod \ p \Big)$</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -239,7 +256,7 @@ $</p>
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>#id-928822 {
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>#id-c11225 {
   text-align: center; }
 </style><script type="text/javascript">
     window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"SW52LR4DGP","algoliaIndex":"d3m0_blog","algoliaSearchKey":"b6f298fb0223168453cc898f455f49e2","noResultsFound":"No results found","type":"algolia"}};
