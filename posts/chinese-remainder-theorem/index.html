@@ -38,7 +38,7 @@ $m_{1},m_{2}, \cdots ,m_{n}$ 為彼此互質的整數 ( $m_{i}$ 可為質數的 
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "crypto, math, CRT","wordcount":  280 ,
+            },"genre": "posts","keywords": "crypto, math, CRT","wordcount":  379 ,
         "url": "https:\/\/cycd3m0.github.io\/posts\/chinese-remainder-theorem\/","datePublished": "2020-05-04T02:13:58+08:00","dateModified": "2020-05-04T02:13:58+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
@@ -123,7 +123,7 @@ $m_{1},m_{2}, \cdots ,m_{n}$ 為彼此互質的整數 ( $m_{i}$ 可為質數的 
         </div><article class="page single"><h1 class="single-title animated flipInX">Chinese Remainder Theorem</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-04>2020-05-04</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 280 words&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 379 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
@@ -136,6 +136,7 @@ $m_{1},m_{2}, \cdots ,m_{n}$ 為彼此互質的整數 ( $m_{i}$ 可為質數的 
       <ul>
         <li><a href="#solution">Solution</a></li>
         <li><a href="#example">Example</a></li>
+        <li><a href="#example2">Example2</a></li>
         <li><a href="#implementation">Implementation</a></li>
       </ul>
     </li>
@@ -187,7 +188,30 @@ $$</p>
 A = [\ (2 \times 3 \times 323) + (3 \times 7 \times 209) + (3 \times 6 \times 187)\ ] \ \bmod 3553 \\
 \hspace{1em} = 2587
 $</p>
-<p><br/> $x \equiv 2587 \ ( \bmod \ 3553 )$</p>
+<br/>
+<p>$x \equiv 2587 \ ( \bmod \ 3553 )$</p>
+<br/>
+<h3 id="example2">Example2</h3>
+<p>$$
+\begin{cases}
+x \equiv 2 \ ( \bmod \ p ) \\
+x \equiv 2 \ ( \bmod \ q )
+\end{cases}
+\hspace{1.5em} p , q \hspace{0.5em} \text{互質}
+$$</p>
+<p>$x = k_1 p + 2$</p>
+<p>$x = k_2 q + 2$</p>
+<p>$k_1 p + 2 = k_2 q + 2$</p>
+<p>$k_1 p = k_2 q$</p>
+<br/>
+<p>$\because p , q \text{互質}$</p>
+<p>$\therefore k_1 = r_1 q$</p>
+<p>$\hspace{1em} k_2 = r_2 p$</p>
+<p>$\because k_1 p = k_2 q$</p>
+<p>$\therefore r_1 = r_2$ ( call $r$ )</p>
+<br/>
+<p>$x = rpq + 2$</p>
+<p>$x \equiv 2 \ ( \bmod \ pq )$</p>
 <br/>
 <h3 id="implementation">Implementation</h3>
 <div class="highlight"><div class="chroma">

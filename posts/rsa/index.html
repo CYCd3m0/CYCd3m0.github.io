@@ -44,7 +44,7 @@ Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "crypto, asymmetric, RSA","wordcount":  255 ,
+            },"genre": "posts","keywords": "crypto, asymmetric, RSA","wordcount":  331 ,
         "url": "https:\/\/cycd3m0.github.io\/posts\/rsa\/","datePublished": "2020-05-16T10:20:01+08:00","dateModified": "2020-05-16T10:20:01+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
@@ -129,7 +129,7 @@ Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
         </div><article class="page single"><h1 class="single-title animated flipInX">RSA</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-05-16>2020-05-16</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 255 words&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 331 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
@@ -144,6 +144,7 @@ Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$"/>
         <li><a href="#encryption">Encryption</a></li>
         <li><a href="#decryption">Decryption</a></li>
         <li><a href="#correctness">Correctness</a></li>
+        <li><a href="#correctness-for-lambda-n">Correctness for $\lambda (n)$</a></li>
       </ul>
     </li>
     <li><a href="#attacks">Attacks</a>
@@ -192,6 +193,17 @@ $$</p>
 M \times (M^{\phi(n)})^{k} \equiv M \times (1)^{k} = M \ (\bmod \ n)
 $$</p>
 <p>based on <a href="https://cycd3m0.github.io/posts/eulers-totient-function/#eulers-theorem" target="_blank" rel="noopener noreffer">Euler’s theorem</a></p>
+<h3 id="correctness-for-lambda-n">Correctness for $\lambda (n)$</h3>
+<p>$$\text{prove} \hspace{1em} M^{\lambda (n)} \equiv 1 \ (\bmod \ n)$$</p>
+<p>$$\lambda (n) = \text{lcm} (p-1,q-1)$$</p>
+<p>$$\hspace{0.2em} = k_1 \times (p-1)$$</p>
+<p>$$\hspace{0.2em} = k_2 \times (q-1)$$</p>
+<br/>
+<p>$$M^{\lambda (n)} = M^{k_1 \times (p-1)} \equiv 1 \ (\bmod \ p)$$</p>
+<p>$$M^{\lambda (n)} = M^{k_2 \times (q-1)} \equiv 1 \ (\bmod \ q)$$</p>
+<p>based on <a href="https://cycd3m0.github.io/posts/eulers-totient-function/#fermats-little-theorem" target="_blank" rel="noopener noreffer">Fermat’s little theorem</a></p>
+<p>$$\text{So by the Chinese Remainder Theorem, we must have that}$$</p>
+<p>$$M^{\lambda (n)} \equiv 1 \ (\bmod \ n)$$</p>
 <br/>
 <h2 id="attacks">Attacks</h2>
 <h3 id="pollards-p-1">Pollard&rsquo;s p-1</h3>
