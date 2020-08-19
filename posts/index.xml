@@ -3,7 +3,19 @@
         <title>All Posts - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/posts/</link>
         <description>All Posts | d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 07 Jul 2020 02:06:27 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Aug 2020 03:07:22 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Attack Models</title>
+    <link>https://cycd3m0.github.io/posts/attack-models/</link>
+    <pubDate>Thu, 20 Aug 2020 03:07:22 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/attack-models/</guid>
+    <description><![CDATA[attack models   Known plaintext attack $\hspace{1em}$ (KPA)
+ 攻擊者有一些對應的 明文-密文    Known ciphertext attack $\hspace{0.4em}$ (KCA)
+ 攻擊者有一些 密文    Chosen plaintext attack $\hspace{0.75em}$ (CPA)
+ 攻擊者可 選擇任意明文並得到對應密文    Chosen ciphertext attack $\hspace{0.15em}$ (CCA)
+ 攻擊者可 選擇任意密文並得到對應明文        difficulty for adversary (easy $\rightarrow$ difficult)
+ CCA $\hspace{0.5em}$ CPA $\hspace{0.5em}$ KPA $\hspace{0.5em}$ KCA       security level (weak $\rightarrow$ strong)]]></description>
+</item><item>
     <title>RSA-CRT</title>
     <link>https://cycd3m0.github.io/posts/rsa-crt/</link>
     <pubDate>Tue, 07 Jul 2020 02:06:27 &#43;0800</pubDate>
@@ -119,19 +131,5 @@ $$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1+b_1} \times \c
   Encryption   明文為 $m$
   Alice 隨機選擇一個與 $P-1$ 互質的整數 $k$
  $k$ 不可洩漏    計算 $C_{1} = g^{k} \bmod P$]]></description>
-</item><item>
-    <title>Diffie Hellman</title>
-    <link>https://cycd3m0.github.io/posts/diffie-hellman/</link>
-    <pubDate>Sun, 17 May 2020 03:54:38 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/posts/diffie-hellman/</guid>
-    <description><![CDATA[Diffie-Hellman key exchange   選擇一個質數 $p$ ，和一個整數 $g$
- $(p,g)$ 是公開的資訊    Alice 隨機選擇一個整數 $a$ 作為私鑰，並計算 $A = g^{a} \bmod p$ 傳送給 Bob
-  $a$ 是 Alice 的私鑰
-  $A$ 是可公開的資訊
-    Bob 隨機選擇一個整數 $b$ 作為私鑰，並計算 $B = g^{b} \bmod p$ 傳送給 Alice
-  $b$ 是 Bob 的私鑰
-  $B$ 是可公開的資訊
-    Alice 計算 $s = B^{a} \bmod p$]]></description>
 </item></channel>
 </rss>

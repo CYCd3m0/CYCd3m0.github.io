@@ -5,41 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>RSA-CRT - d3m0&#39;s Blog</title>
-        <meta name="Description" content=""><meta property="og:title" content="RSA-CRT" />
-<meta property="og:description" content="RSA with CRT $$ M = C^d \ (\bmod \ n) $$
-對 $C$ 解密的過程，可以透過 CRT 加速  假設兩個未知數 $m_1 , m_2$ 如下
-$m_1 = M \ (\bmod \ p) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ p) = C^d \ (\bmod \ p)$
-$m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ q) = C^d \ (\bmod \ q)$" />
+        <title>Attack Models - d3m0&#39;s Blog</title>
+        <meta name="Description" content=""><meta property="og:title" content="Attack Models" />
+<meta property="og:description" content="attack models   Known plaintext attack $\hspace{1em}$ (KPA)
+ 攻擊者有一些對應的 明文-密文    Known ciphertext attack $\hspace{0.4em}$ (KCA)
+ 攻擊者有一些 密文    Chosen plaintext attack $\hspace{0.75em}$ (CPA)
+ 攻擊者可 選擇任意明文並得到對應密文    Chosen ciphertext attack $\hspace{0.15em}$ (CCA)
+ 攻擊者可 選擇任意密文並得到對應明文        difficulty for adversary (easy $\rightarrow$ difficult)
+ CCA $\hspace{0.5em}$ CPA $\hspace{0.5em}$ KPA $\hspace{0.5em}$ KCA       security level (weak $\rightarrow$ strong)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://cycd3m0.github.io/posts/rsa-crt/" />
-<meta property="article:published_time" content="2020-07-07T02:06:27+08:00" />
-<meta property="article:modified_time" content="2020-07-07T02:06:27+08:00" />
+<meta property="og:url" content="https://cycd3m0.github.io/posts/attack-models/" />
+<meta property="article:published_time" content="2020-08-20T03:07:22+08:00" />
+<meta property="article:modified_time" content="2020-08-20T03:07:22+08:00" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="RSA-CRT"/>
-<meta name="twitter:description" content="RSA with CRT $$ M = C^d \ (\bmod \ n) $$
-對 $C$ 解密的過程，可以透過 CRT 加速  假設兩個未知數 $m_1 , m_2$ 如下
-$m_1 = M \ (\bmod \ p) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ p) = C^d \ (\bmod \ p)$
-$m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ q) = C^d \ (\bmod \ q)$"/>
+<meta name="twitter:title" content="Attack Models"/>
+<meta name="twitter:description" content="attack models   Known plaintext attack $\hspace{1em}$ (KPA)
+ 攻擊者有一些對應的 明文-密文    Known ciphertext attack $\hspace{0.4em}$ (KCA)
+ 攻擊者有一些 密文    Chosen plaintext attack $\hspace{0.75em}$ (CPA)
+ 攻擊者可 選擇任意明文並得到對應密文    Chosen ciphertext attack $\hspace{0.15em}$ (CCA)
+ 攻擊者可 選擇任意密文並得到對應明文        difficulty for adversary (easy $\rightarrow$ difficult)
+ CCA $\hspace{0.5em}$ CPA $\hspace{0.5em}$ KPA $\hspace{0.5em}$ KCA       security level (weak $\rightarrow$ strong)"/>
 <meta name="application-name" content="d3m0&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="d3m0&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/rsa-crt/" /><link rel="prev" href="https://cycd3m0.github.io/posts/extended-euclidean/" /><link rel="next" href="https://cycd3m0.github.io/posts/attack-models/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://cycd3m0.github.io/posts/attack-models/" /><link rel="prev" href="https://cycd3m0.github.io/posts/rsa-crt/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "RSA-CRT",
+        "headline": "Attack Models",
         "inLanguage": "en",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/cycd3m0.github.io\/posts\/rsa-crt\/"
+            "@id": "https:\/\/cycd3m0.github.io\/posts\/attack-models\/"
         },"image": {
                 "@type": "ImageObject",
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "math, crypto, RSA, CRT","wordcount":  416 ,
-        "url": "https:\/\/cycd3m0.github.io\/posts\/rsa-crt\/","datePublished": "2020-07-07T02:06:27+08:00","dateModified": "2020-07-07T02:06:27+08:00","publisher": {
+            },"genre": "posts","keywords": "crypto","wordcount":  55 ,
+        "url": "https:\/\/cycd3m0.github.io\/posts\/attack-models\/","datePublished": "2020-08-20T03:07:22+08:00","dateModified": "2020-08-20T03:07:22+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
                 "logo": {
@@ -120,11 +124,11 @@ $m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">RSA-CRT</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animated flipInX">Attack Models</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-07-07>2020-07-07</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 416 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-08-20>2020-08-20</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 55 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -132,118 +136,79 @@ $m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#rsa-with-crt">RSA with CRT</a>
-      <ul>
-        <li><a href="#conclusion">Conclusion</a></li>
-      </ul>
-    </li>
+    <li><a href="#attack-models">attack models</a></li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="rsa-with-crt">RSA with CRT</h2>
-<p>$$
-M = C^d \ (\bmod \ n)
-$$</p>
-<div id="id-327b7b">對 $C$ 解密的過程，可以透過 <a href="https://cycd3m0.github.io/posts/chinese-remainder-theorem/" target="_blank" rel="noopener noreffer">CRT</a> 加速</div>
+            </div><div class="content" id="content"><h2 id="attack-models">attack models</h2>
+<ul>
+<li>
+<p>Known plaintext attack $\hspace{1em}$ (KPA)</p>
+<ul>
+<li>攻擊者有一些對應的 <strong>明文-密文</strong></li>
+</ul>
+</li>
+<li>
+<p>Known ciphertext attack $\hspace{0.4em}$ (KCA)</p>
+<ul>
+<li>攻擊者有一些 <strong>密文</strong></li>
+</ul>
+</li>
+<li>
+<p>Chosen plaintext attack $\hspace{0.75em}$ (CPA)</p>
+<ul>
+<li>攻擊者可 <strong>選擇任意明文並得到對應密文</strong></li>
+</ul>
+</li>
+<li>
+<p>Chosen ciphertext attack $\hspace{0.15em}$ (CCA)</p>
+<ul>
+<li>攻擊者可 <strong>選擇任意密文並得到對應明文</strong></li>
+</ul>
+</li>
+</ul>
 <br/>
-<p>假設兩個未知數 $m_1 , m_2$ 如下</p>
-<p>$m_1 = M \ (\bmod \ p) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ p) = C^d \ (\bmod \ p)$</p>
-<p>$m_2 = M \ (\bmod \ q) \hspace{1em} = \lbrack C^d \ (\bmod \ n) \rbrack \ (\bmod \ q) = C^d \ (\bmod \ q)$</p>
-<div class="details admonition note open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content"><p>若 $a \mid b$</p>
-<p>則 $\lbrack x \ (\bmod \ b) \rbrack \ (\bmod \ a) = x \ (\bmod \ a)$</p>
 <br/>
-<p>因為 $x - b$</p>
-<p>$\hspace{0.8em} = x \hspace{0.2em} \underbrace{- \hspace{0.2em} a \cdots -a}_{\frac{b}{a} \text{個}}$</p>
-</div>
-        </div>
-    </div>
-<div class="details admonition note open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-pencil-alt fa-fw"></i>Note<i class="details-icon fas fa-angle-right fa-fw"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content"><p>$m_1 = C^d \ (\bmod \ p)$</p>
-<p>$d$ 可以表示為 $t (p-1) + r$</p>
-<p>$(r$ 是 $d$ 除以 $p-1$ 的餘數$)$</p>
-<p>$r = d \ (\bmod \ (p-1))$</p>
-<p>$m_1 = C^{\hspace{0.1em} t (p-1) + r} \ (\bmod \ p)$</p>
-<p>$\hspace{1.6em} = C^{\hspace{0.1em} r} \ (\bmod \ p) \hspace{15em}$
-based on <a href="https://cycd3m0.github.io/posts/eulers-totient-function/#fermats-little-theorem" target="_blank" rel="noopener noreffer">Fermat’s little theorem</a></p>
-<p>這邊的 $r$ 稱為 $d_p$</p>
+<ul>
+<li>
+<p>difficulty for adversary (easy $\rightarrow$ difficult)</p>
+<ul>
+<li>CCA $\hspace{0.5em}$ CPA $\hspace{0.5em}$ KPA $\hspace{0.5em}$ KCA</li>
+</ul>
+</li>
+</ul>
 <br/>
-<p>簡單來說 $\hspace{1em} d_p \hspace{0.2em} = d \ (\bmod \ (p-1))$</p>
-<p>$\hspace{4.4em} m_1 = C^{\hspace{0.1em} d_p} \ (\bmod \ p)$</p>
-<br/>
-<p>同理 $\hspace{2.7em} d_q \hspace{0.2em} = d \ (\bmod \ (q-1))$</p>
-<p>$\hspace{4.4em} m_2 = C^{\hspace{0.1em} d_q} \ (\bmod \ q)$</p>
-<br/>
-<p>計算 $d_p , d_q$ 有更快的方法 <del>(但我不會證明)</del></p>
-<p>$d_p = \text{inverse} (e \hspace{0.2em} , \hspace{0.2em} p-1)$</p>
-<p>$d_q = \text{inverse} (e \hspace{0.2em} , \hspace{0.2em} q-1)$</p>
-</div>
-        </div>
-    </div>
-<br/>
-<p>透過上面的假設，可以寫成符合 CRT 的形式</p>
-<p>$
-\begin{cases}
-M \equiv m_1 \ ( \bmod \ p ) \\
-M \equiv m_2 \ ( \bmod \ q )
-\end{cases}
-$</p>
-<br/>
-<p>令 $M = m_2 + kq$ ，代回第一式並移項</p>
-<p>$m_2 + kq \equiv m_1 \ ( \bmod \ p )$</p>
-<p>$m_1 - m_2 \equiv kq \ ( \bmod \ p )$</p>
-<br/>
-<p>因為 $p , q$ 互質，所以存在 $q$ 對 $p$ 的模反元素 $q^{-1}$ ，使 $qq^{-1} \equiv 1 \ ( \bmod \ p )$</p>
-<p>對上面的式子左右同乘 $q^{-1}$</p>
-<p>$q^{-1}(m_1 - m_2) \equiv k \ ( \bmod \ p )$</p>
-<p>$k$ 的最小正整數解為 $q^{-1}(m_1 - m_2)\ \bmod \ p$</p>
-<br/>
-<p>因此 $M = m_2 + q \Big( q^{-1}(m_1 - m_2)\ \bmod \ p \Big)$</p>
-<br/>
-<h3 id="conclusion">Conclusion</h3>
-<br/>
-<p>$d_p \hspace{0.4em} = \hspace{0.3em} d \hspace{0.5em} (\bmod \ (p-1))$</p>
-<p>$\hspace{1.7em} = \hspace{0.3em} \text{inverse} (e \hspace{0.2em} , \hspace{0.2em} p-1)$</p>
-<p>$d_q \hspace{0.4em} = \hspace{0.3em} d \hspace{0.5em} (\bmod \ (q-1))$</p>
-<p>$\hspace{1.7em} = \hspace{0.3em} \text{inverse} (e \hspace{0.2em} , \hspace{0.2em} q-1)$</p>
-<p>$q^{-1} = \hspace{0.3em} \text{inverse} (q \hspace{0.2em} , \hspace{0.2em} p)$</p>
-<br/>
-<p>$m_1 \hspace{0.1em} = \hspace{0.3em} C^{d_p} \ (\bmod \ p)$</p>
-<p>$m_2 \hspace{0.1em} = \hspace{0.3em} C^{d_q} \ (\bmod \ q)$</p>
-<br/>
-<p>$M \hspace{0.3em} = \hspace{0.3em} m_2 + q \Big( q^{-1}(m_1 - m_2)\ \bmod \ p \Big)$</p>
+<ul>
+<li>
+<p>security level (weak $\rightarrow$ strong)</p>
+<ul>
+<li>KCA $\hspace{0.5em}$ KPA $\hspace{0.5em}$ CPA $\hspace{0.5em}$ CCA</li>
+</ul>
+</li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>The article was updated on 2020-07-07</span>
+                <span>The article was updated on 2020-08-20</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/rsa-crt/" data-title="RSA-CRT" data-via="d3m094035901" data-hashtags="math,crypto,RSA,CRT"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/rsa-crt/" data-hashtag="math"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/rsa-crt/" data-title="RSA-CRT"><i class="fab fa-line fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://cycd3m0.github.io/posts/attack-models/" data-title="Attack Models" data-via="d3m094035901" data-hashtags="crypto"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://cycd3m0.github.io/posts/attack-models/" data-hashtag="crypto"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://cycd3m0.github.io/posts/attack-models/" data-title="Attack Models"><i class="fab fa-line fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/math/">math</a>,&nbsp;<a href="/tags/crypto/">crypto</a>,&nbsp;<a href="/tags/rsa/">RSA</a>,&nbsp;<a href="/tags/crt/">CRT</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/crypto/">crypto</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/extended-euclidean/" class="prev" rel="prev" title="Extended Euclidean"><i class="fas fa-angle-left fa-fw"></i>Extended Euclidean</a>
-            <a href="/posts/attack-models/" class="next" rel="next" title="Attack Models">Attack Models<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/rsa-crt/" class="prev" rel="prev" title="RSA-CRT"><i class="fas fa-angle-left fa-fw"></i>RSA-CRT</a></div>
 </div>
 </article></div>
             </main><footer class="footer">
@@ -257,9 +222,7 @@ $</p>
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><style>#id-327b7b {
-  text-align: center; }
-</style><script type="text/javascript">
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript">
     window.config = {"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"headerMode":{"desktop":null,"mobile":null},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"SW52LR4DGP","algoliaIndex":"d3m0_blog","algoliaSearchKey":"b6f298fb0223168453cc898f455f49e2","noResultsFound":"No results found","type":"algolia"}};
 </script><script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CrequestAnimationFrame%2CCustomEvent%2CPromise%2CObject.entries%2CObject.assign%2CObject.values%2Cfetch%2CElement.prototype.after%2CArray.prototype.fill%2CIntersectionObserver%2CArray.from%2CArray.prototype.find%2CMath.sign"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/object-fit-images/ofi.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

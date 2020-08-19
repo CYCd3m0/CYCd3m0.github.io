@@ -3,7 +3,19 @@
         <title>crypto - Tag - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/tags/crypto/</link>
         <description>crypto - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 07 Jul 2020 02:06:27 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/crypto/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Aug 2020 03:07:22 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/crypto/" rel="self" type="application/rss+xml" /><item>
+    <title>Attack Models</title>
+    <link>https://cycd3m0.github.io/posts/attack-models/</link>
+    <pubDate>Thu, 20 Aug 2020 03:07:22 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/attack-models/</guid>
+    <description><![CDATA[attack models   Known plaintext attack $\hspace{1em}$ (KPA)
+ 攻擊者有一些對應的 明文-密文    Known ciphertext attack $\hspace{0.4em}$ (KCA)
+ 攻擊者有一些 密文    Chosen plaintext attack $\hspace{0.75em}$ (CPA)
+ 攻擊者可 選擇任意明文並得到對應密文    Chosen ciphertext attack $\hspace{0.15em}$ (CCA)
+ 攻擊者可 選擇任意密文並得到對應明文        difficulty for adversary (easy $\rightarrow$ difficult)
+ CCA $\hspace{0.5em}$ CPA $\hspace{0.5em}$ KPA $\hspace{0.5em}$ KCA       security level (weak $\rightarrow$ strong)]]></description>
+</item><item>
     <title>RSA-CRT</title>
     <link>https://cycd3m0.github.io/posts/rsa-crt/</link>
     <pubDate>Tue, 07 Jul 2020 02:06:27 &#43;0800</pubDate>
@@ -115,15 +127,5 @@ $$ e \times d \equiv 1 \ (\bmod \ \phi (n)) $$
 Note  選擇的 $e$ 必須與 $\phi (n)$ 互質   Encryption $$ M^{e} \equiv C \ (\bmod \ n) $$
 Decryption $$ C^{d} \equiv M \ (\bmod \ n) $$
 Correctness $$ e \times d \equiv 1 \ (\bmod \ \phi(n)) $$]]></description>
-</item><item>
-    <title>Chinese Remainder Theorem</title>
-    <link>https://cycd3m0.github.io/posts/chinese-remainder-theorem/</link>
-    <pubDate>Mon, 04 May 2020 02:13:58 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/posts/chinese-remainder-theorem/</guid>
-    <description><![CDATA[Chinese Remainder Theorem $$ \begin{cases} x \equiv a_{1} \ ( \bmod \ m_{1} ) \\ x \equiv a_{2} \ ( \bmod \ m_{2} ) \\ \hspace{3.5em} \vdots \\ x \equiv a_{n} \ ( \bmod \ m_{n} ) \end{cases} $$
-已知合數 $M = m_{1} \times m_{2} \times \cdots \times m_{n}$
-$m_{1},m_{2}, \cdots ,m_{n}$ 為彼此互質的整數 ( $m_{i}$ 可為質數的 $k$ 次方，如 $m_{1} = 5^{3}$ )
- 我們可以透過 $a_{1},a_{2}, \cdots ,a_{n}$ 以及 $m_{1},m_{2}, \cdots ,m_{n}$ 計算出 $A$]]></description>
 </item></channel>
 </rss>
