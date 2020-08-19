@@ -48,7 +48,7 @@
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "crypto, lattice-based, post-quantum","wordcount":  329 ,
+            },"genre": "posts","keywords": "crypto, lattice-based, post-quantum","wordcount":  335 ,
         "url": "https:\/\/cycd3m0.github.io\/posts\/ntruencrypt\/","datePublished": "2020-06-26T19:44:07+08:00","dateModified": "2020-06-26T19:44:07+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
@@ -133,7 +133,7 @@
         </div><article class="page single"><h1 class="single-title animated flipInX">NTRUEncrypt</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-06-26>2020-06-26</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 329 words&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 335 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
@@ -240,7 +240,12 @@
 <li>
 <p>$a = f \cdot c \ (\bmod \ q)$</p>
 <ul>
-<li>$a$ 的係數是在 $\lbrack - \tfrac{q}{2} , \tfrac{q}{2} \rbrack$ 之間，而非 $\lbrack 0 , q-1 \rbrack$ ，為了避免解密錯誤</li>
+<li>
+<p>$a$ 的係數是在 $\lbrack - \tfrac{q}{2} , \tfrac{q}{2} \rbrack$ 之間，而非 $\lbrack 0 , q-1 \rbrack$</p>
+</li>
+<li>
+<p>center lift 提高解密正確率，避免超過 $p$ ，模 $q$ 的餘數不變</p>
+</li>
 </ul>
 </li>
 <li>
