@@ -10,7 +10,7 @@
 <meta property="og:description" content="貝祖定理 (Bézout&rsquo;s lemma) 對任意整數 $a , b$
  方程式 $ax&#43;by=m \hspace{1em} (x,y)$ 有整數解 $\hspace{1em} \leftrightarrow \hspace{1em}$ $\text{gcd} (a,b) \mid m$
  擴展歐基里得 (Extended Euclidean) 可計算出 $\text{gcd} (a,b) ,\ x ,\ y$
- 1 2 3 4 5 6 7  def extended_Euclidean(a, b) : if b == 0 : return (a, 1, 0) else : g, x, y = extended_Euclidean(b, a%b) x, y = y, (x - (a // b) * y) return (g, x, y)    模反元素 (modular multiplicative inverse)  Using extended Euclidean 如果 $\text{gcd} = 1$ ，則存在模反元素" />
+ 1 2 3 4 5 6 7  def extended_Euclidean(a, b) : if b == 0 : return (a, 1, 0) else : g, x, y = extended_Euclidean(b, a%b) x, y = y, (x - (a // b) * y) return (g, x, y)    Proof of Euclidean algorithm  任意整數 $A, B \hspace{1em}$ 可以寫成 $A = Bq &#43; R$" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://cycd3m0.github.io/posts/extended-euclidean/" />
 <meta property="article:published_time" content="2020-07-06T22:47:01+08:00" />
@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="貝祖定理 (Bézout&rsquo;s lemma) 對任意整數 $a , b$
  方程式 $ax&#43;by=m \hspace{1em} (x,y)$ 有整數解 $\hspace{1em} \leftrightarrow \hspace{1em}$ $\text{gcd} (a,b) \mid m$
  擴展歐基里得 (Extended Euclidean) 可計算出 $\text{gcd} (a,b) ,\ x ,\ y$
- 1 2 3 4 5 6 7  def extended_Euclidean(a, b) : if b == 0 : return (a, 1, 0) else : g, x, y = extended_Euclidean(b, a%b) x, y = y, (x - (a // b) * y) return (g, x, y)    模反元素 (modular multiplicative inverse)  Using extended Euclidean 如果 $\text{gcd} = 1$ ，則存在模反元素"/>
+ 1 2 3 4 5 6 7  def extended_Euclidean(a, b) : if b == 0 : return (a, 1, 0) else : g, x, y = extended_Euclidean(b, a%b) x, y = y, (x - (a // b) * y) return (g, x, y)    Proof of Euclidean algorithm  任意整數 $A, B \hspace{1em}$ 可以寫成 $A = Bq &#43; R$"/>
 <meta name="application-name" content="d3m0&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="d3m0&#39;s Blog"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -38,7 +38,7 @@
                 "url": "https:\/\/cycd3m0.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "math, crypto","wordcount":  163 ,
+            },"genre": "posts","keywords": "math, crypto","wordcount":  241 ,
         "url": "https:\/\/cycd3m0.github.io\/posts\/extended-euclidean\/","datePublished": "2020-07-06T22:47:01+08:00","dateModified": "2020-07-06T22:47:01+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
@@ -123,8 +123,8 @@
         </div><article class="page single"><h1 class="single-title animated flipInX">Extended Euclidean</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>d3m0</a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-07-06>2020-07-06</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 163 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
+                <i class="fas fa-pencil-alt fa-fw"></i>about 241 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
         </div><div class="details toc" id="toc-static">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -170,6 +170,30 @@
         <span class="k">return</span> <span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span></code></pre></td></tr></table>
 </div>
 </div>
+<br/>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>Proof of Euclidean algorithm<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>任意整數 $A, B \hspace{1em}$ 可以寫成 $A = Bq + R$</p>
+<p>輾轉相除法的內容是 $\gcd(A, B) = \gcd(B, R)$</p>
+<br/>
+<p>因為 $A, B$ 的<strong>任意</strong>公因數 $g$ ，必然是 $R$ 的因數</p>
+<p>$A = ag$</p>
+<p>$B = bg$</p>
+<p>$ag = bgq + R$</p>
+<p>$R = g * (a - bq)$</p>
+<br/>
+<p>且 $B, R$ 的<strong>任意</strong>公因數 $u$ ，也必然是 $A$ 的因數</p>
+<p>$B = bu$</p>
+<p>$R = ru$</p>
+<p>$A = buq + ru = u * (bq + r)$</p>
+<br/>
+<p>所以 $(A, B)$ 和 $(B, R)$ 的公因數完全相同，也有相同的最大公因數</p>
+</div>
+        </div>
+    </div>
 <br/>
 <h2 id="模反元素-modular-multiplicative-inverse">模反元素 (modular multiplicative inverse)</h2>
 <br/>
