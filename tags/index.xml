@@ -3,7 +3,14 @@
         <title>Tags - Tag - d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/tags/</link>
         <description>Tags - Tag - d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Aug 2020 03:07:22 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 13 Sep 2020 21:08:49 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>ISO</title>
+    <link>https://cycd3m0.github.io/tags/iso/</link>
+    <pubDate>Sun, 13 Sep 2020 21:08:49 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/tags/iso/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>crypto</title>
     <link>https://cycd3m0.github.io/tags/crypto/</link>
     <pubDate>Thu, 20 Aug 2020 03:07:22 &#43;0800</pubDate>
@@ -65,13 +72,6 @@
     <pubDate>Tue, 26 May 2020 20:54:47 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://cycd3m0.github.io/tags/binary/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>signed number</title>
-    <link>https://cycd3m0.github.io/tags/signed-number/</link>
-    <pubDate>Tue, 26 May 2020 20:54:47 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/tags/signed-number/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

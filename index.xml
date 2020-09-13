@@ -3,7 +3,20 @@
         <title>d3m0&#39;s Blog</title>
         <link>https://cycd3m0.github.io/</link>
         <description>d3m0&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 20 Aug 2020 03:07:22 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 13 Sep 2020 21:08:49 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/" rel="self" type="application/rss+xml" /><item>
+    <title>ISO 27001</title>
+    <link>https://cycd3m0.github.io/posts/iso-27001/</link>
+    <pubDate>Sun, 13 Sep 2020 21:08:49 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/iso-27001/</guid>
+    <description><![CDATA[ISO 27001  4. 組織背景   4.1 了解組織及其背景
+ 組織應決定與策略方針相關，以及會影響達成預期成果的內部與外部議題，並對內外部議題監督、審查    4.2 了解利害關係人的需求及期望
+ 組織應監督及審查利害關係人的資訊、要求    4.3 決定ISMS的範圍，並維持、保存文件化資訊
+ 組織應依照本國際標準之要求建立、實施、維持和持續改善資訊安全管理系統，包括所需的流程和流程間的相互關係    4.4 資訊安全管理系統
+ 依據國際標準的要求，組織應建立、實作、維護並持續改進ISMS     5. 領導統御   5.1 領導統御與承諾
+ 最高管理階層應透過以下方式，展現其對資訊安全管理系統的領導統御與承諾  確保資訊安全政策和目標的制定，並與組織的營運策略方向兼容 確保ISMS的要求整合到組織流程 確保ISMS所需資源是可用的且達成ISMS預期成果 有效溝通ISMS的重要性並遵守ISMS的要求且持續改進      5.2 政策
+ 建立資訊安全政策  適用於組織的目標 提供設置資訊安全目標的框架 滿足資訊安全相關適用要求、持續改進ISMS的承諾   溝通資訊安全政策  建立以及維持文件化資訊 在組織內溝通、理解和應用 適當時，提供給相關的利害關係人      5.]]></description>
+</item><item>
     <title>Attack Models</title>
     <link>https://cycd3m0.github.io/posts/attack-models/</link>
     <pubDate>Thu, 20 Aug 2020 03:07:22 &#43;0800</pubDate>
@@ -95,7 +108,7 @@ $$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1+b_1} \times \c
 1  sage &lt;SageFile&gt;    SageMath with Python   如果要在 sage 裡寫 python
   就在 python 的檔案加上 1  from sage.all import *]]></description>
 </item><item>
-    <title>補數</title>
+    <title>Binary Complement</title>
     <link>https://cycd3m0.github.io/posts/binary-complement/</link>
     <pubDate>Tue, 26 May 2020 20:54:47 &#43;0800</pubDate>
     <author>Author</author>
@@ -118,18 +131,5 @@ $$ \therefore \text{gcd} (m,n) \times \text{lcm} (m,n) = p_1^{a_1+b_1} \times \c
   單位元素 $0$ ，代表一個無窮遠的點
   $P$ 的反元素 $-P$ ，代表 $P$ 對 $x$ 軸的鏡射
  $P + (-P) = 0$     定義 $$ \lbrace (x,y) \isin \Bbb{R}^{2} \hspace{0.5em} | \hspace{0.5em} y^{2} = x^{3} + ax + b \hspace{0.5em} , \hspace{0.5em} 4a^{3} + 27b^{2} \not = 0 \rbrace \cup \lbrace 0 \rbrace $$]]></description>
-</item><item>
-    <title>ElGamal</title>
-    <link>https://cycd3m0.github.io/posts/elgamal/</link>
-    <pubDate>Sun, 17 May 2020 04:28:47 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://cycd3m0.github.io/posts/elgamal/</guid>
-    <description><![CDATA[ElGamal Key generation   選擇一個整數 $g$ ，和一個質數 $P$ $\hspace{0.8em} (0 &lt; g &lt; P)$
-  Bob 隨機選擇一個整數 $x$ 作為私鑰 $(0 &lt; x &lt; P)$
-  計算 $y = g^{x} \bmod P\ $ 作為 Bob 的公鑰
-  公鑰包含 $(y,g,P)$ ，私鑰為 $x$
-  Encryption   明文為 $m$
-  Alice 隨機選擇一個與 $P-1$ 互質的整數 $k$
- $k$ 不可洩漏    計算 $C_{1} = g^{k} \bmod P$]]></description>
 </item></channel>
 </rss>

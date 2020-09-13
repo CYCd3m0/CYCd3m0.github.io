@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ISO - Tag - d3m0&#39;s Blog</title>
+        <link>https://cycd3m0.github.io/tags/iso/</link>
+        <description>ISO - Tag - d3m0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 13 Sep 2020 21:08:49 &#43;0800</lastBuildDate><atom:link href="https://cycd3m0.github.io/tags/iso/" rel="self" type="application/rss+xml" /><item>
+    <title>ISO 27001</title>
+    <link>https://cycd3m0.github.io/posts/iso-27001/</link>
+    <pubDate>Sun, 13 Sep 2020 21:08:49 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://cycd3m0.github.io/posts/iso-27001/</guid>
+    <description><![CDATA[ISO 27001  4. 組織背景   4.1 了解組織及其背景
+ 組織應決定與策略方針相關，以及會影響達成預期成果的內部與外部議題，並對內外部議題監督、審查    4.2 了解利害關係人的需求及期望
+ 組織應監督及審查利害關係人的資訊、要求    4.3 決定ISMS的範圍，並維持、保存文件化資訊
+ 組織應依照本國際標準之要求建立、實施、維持和持續改善資訊安全管理系統，包括所需的流程和流程間的相互關係    4.4 資訊安全管理系統
+ 依據國際標準的要求，組織應建立、實作、維護並持續改進ISMS     5. 領導統御   5.1 領導統御與承諾
+ 最高管理階層應透過以下方式，展現其對資訊安全管理系統的領導統御與承諾  確保資訊安全政策和目標的制定，並與組織的營運策略方向兼容 確保ISMS的要求整合到組織流程 確保ISMS所需資源是可用的且達成ISMS預期成果 有效溝通ISMS的重要性並遵守ISMS的要求且持續改進      5.2 政策
+ 建立資訊安全政策  適用於組織的目標 提供設置資訊安全目標的框架 滿足資訊安全相關適用要求、持續改進ISMS的承諾   溝通資訊安全政策  建立以及維持文件化資訊 在組織內溝通、理解和應用 適當時，提供給相關的利害關係人      5.]]></description>
+</item></channel>
+</rss>
